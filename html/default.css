@@ -1,13 +1,3 @@
-body{
+p{
 	background: blue
-}
-
-#container{
-	max-width: 960px
-}
-
-.container{
-	max-width: 960px
-	background: silver;
-	margin: 0 auto;
 }
