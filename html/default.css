@@ -2,3 +2,8 @@
 	background: blue;
 	max-width: 960px;
 }
+.classname{
+	background: orange;
+	max-width: 960px;
+	margin: 0 auto;
+}
