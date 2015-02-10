@@ -1,3 +1,4 @@
-body{
-	background: blue
+#container{
+	background: blue;
+	max-width: 960px;
 }
