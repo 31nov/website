@@ -1,9 +1,5 @@
-#container{
-	background: blue;
-	max-width: 960px;
-}
-.classname{
-	background: orange;
+.body{
+	background: silver;
 	max-width: 960px;
 	margin: 0 auto;
 }
