@@ -1,9 +1,14 @@
-.header_body{
+body
+{
+	background: black;
+}
+.header_body
+{
 	background: silver;
 	max-width: 960px;
 	margin: 0 auto;
 }
-.header_single{
+.header_single
+{
 	background: orange;
-	border: 0 auto;
 }
