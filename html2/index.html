@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="wiewport" content="width=device-width">
+		<link rel="stylesheet" href="css/default.css">
+		<title lang="en">Main-GAME in Earth-31nov</title>
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<script language="javascript">
+			function OpenWindow(url,intWidth,intHeight){
+				window.open(url, "_blank", "width="+intWidth+",height="+intHeight+",resizable=1,scrollbars=1");	
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		<a href="#main" hidden>메뉴 건너뛰기</a>
+			<header class="header">
+				<h1 hidden>31Nov</h1>
+				<img class="h1image" src="image/main_31nov.png" alt="main image">
+				<nav class="gnb">
+					<h2 hidden>메인 메뉴</h2>
+					<ul>
+						<li>
+							<a href="#">menu1</a>
+							<ul>
+								<li><a href="#">menu1-1</a></li>	
+								<li><a href="#">menu1-2</a></li>	
+								<li><a href="#">menu1-3</a></li>	
+							</ul>
+						</li>
+						<li>
+							<a href="#">menu2</a>
+							<ul>
+								<li><a href="#">menu2-1</a></li>	
+								<li><a href="#">menu2-2</a></li>	
+								<li><a href="#">menu2-3</a></li>	
+							</ul>
+						</li>
+						<li>
+							<a href="#">menu3</a>
+							<ul>
+								<li><a href="#">menu3-1</a></li>	
+								<li><a href="#">menu3-2</a></li>	
+								<li><a href="#">menu3-3</a></li>	
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+				<main id="main">
+					<h2>#main</h2>
+				</main>
+			<!-- fixed start-->
+				<div class="fixedmenu">
+					<form class="search" action="search.html">
+						<input type="search" placeholder="search" required>
+						<input type="submit" value="find">
+					</form>
+						<a href="#main"><input class="gototop" type="image" src="image/top1.png"></a>
+						<a href="javascript:document.location.reload();">
+							<input class="reflesh" type="image" src="image/reflesh1.png">
+						</a>
+				</div>
+			<!-- fixed end -->
+				<nav class="lnb">
+					<h2 hidden>MENU1</h2>
+					<ul>
+						<li><a href="#">menu1-1</a></li>	
+						<li><a href="#">menu1-2</a></li>	
+						<li><a href="#">menu1-3</a></li>	
+					</ul>
+				</nav>
+				<aside class="aside">
+					<h2>
+						즐겨찾기
+						<a href="javascript:OpenWindow('addpage.html','470','340')">
+						<input class="addbutton" type="image" src="image/addbutton.png">
+					</a>
+					</h2>
+					<ul>
+						<li><a href="#">즐겨 찾기1</a></li>
+						<li><a href="#">즐겨 찾기2</a></li>
+						<li><a href="#">즐겨 찾기3</a></li>
+					</ul>
+				</aside>
+			<footer class="footer">
+				<p>Copyright &copy 31Nov. All right reserved.</p>
+			</footer>
+		</div>
+	</body>
+</html>
