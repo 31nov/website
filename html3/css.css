@@ -5,4 +5,17 @@
 .block{
 	display: block;
 	background: yellow;
+	width: 100px;
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.inlineblock{
+	color: white;
+	background: blue;
+	width: 100px;
+	height: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
 }

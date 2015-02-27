@@ -1,0 +1,27 @@
+body{
+	background: gray;
+}
+.block1{
+	display: inline-block;
+	background: yellow;
+	width: 100px;
+	height: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.block2{
+	display: inline-block;
+	background: red;
+	width: 100px;
+	height: 30px;
+	margin-left: 40px;
+	margin-right: 10px;
+}
+.block3{
+	display: inline-block;
+	background: blue;
+	width: 100px;
+	height: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
