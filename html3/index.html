@@ -1,0 +1,41 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+<title>딸치와 함께하는 드림위버 MX 2004</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr"> 
+<!-- 스크립트 시작 --> 
+<script language="javascript"> 
+<!-- 
+var checkflag = "false"; 
+function check(field) { 
+if (checkflag == "false") { 
+for (i = 0; i < field.length; i++) { 
+field[i].checked = true;} 
+checkflag = "true"; 
+} 
+else { 
+for (i = 0; i < field.length; i++) { 
+field[i].checked = false; } 
+checkflag = "false"; 
+} 
+} 
+--> 
+</script> 
+<!-- 스크립트 종료 --> 
+</head> 
+<body> 
+<center> 
+<!-- 폼 시작 --> 
+ <form name="form1" method="post" action=""> 
+  <input type=checkbox value="" onClick="this.value=check(this.form.list)"> 
+  <br> 
+  <input type=checkbox name=list value="1"> 
+  <input type=checkbox name=list value="2"> 
+  <input type=checkbox name=list value="3"> 
+  <input type=checkbox name=list value="4"> 
+  <input type=checkbox name=list value="5"> 
+ </form> 
+<!-- 폼 종료 --> 
+</center> 
+</body> 
+</html> 

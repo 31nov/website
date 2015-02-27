@@ -1,0 +1,162 @@
+@charset "utf-8"
+/*html reset*/
+header, footer, section, article, nav, aside, main, figure, figcaption{
+	display: block;
+}
+html, body{
+	min-height: 100%
+}
+body{
+	margin: 0px;
+}
+body, table, button, input, textarea, select{
+	font-size: 14px;
+}
+/*ALL*/
+	body{
+		background-image: -webkit-linear-gradient(#ccc,#fff); 
+		background-image: -moz-linear-gradient(#ccc,#fff); 
+		background-image: -ms-linear-gradient(#ccc,#fff); 
+		background-image: -o-linear-gradient(#ccc,#fff); 
+		background-image: linear-gradient(#ccc,#fff); 
+	}
+	.h1image{
+		margin: 8px;
+		width: 100px;
+	}
+	main, 
+	.lnb, 
+	.aside{
+		margin-bottom: 15px;
+	}
+	main{
+		background: #fff;
+		box-shadow: 0 0 4px #999;
+		box-shadow: 0 0 4px rgba(0,0,0,.3);
+		border-radius: 8px;
+		min-height: 300px;
+	}
+	.fixedmenu{
+		position: fixed;
+		width: auto;
+		padding: 2px 4px; 
+		bottom: 0px;
+		vertical-align: top;
+		background: #9D4747;
+	}
+	.search{
+		letter-spacing: -4px;
+		display: inline-block;
+	}
+	.search>*{
+		vertical-align: top;
+		border-radius: 7px;
+	}
+	.search>input[type="search"]{
+		border: 1px solid #ccc;
+		height: 32px;
+		width: 160px;
+		box-shadow: 0 0 4px #ccc inset;
+		box-sizing: border-box;
+	}
+
+	.search>[type="submit"]{
+		width: 50px;
+		height: 32px;
+		background: #fff;
+		border: 1px solid #ccc;
+		box-shadow: 0 0 4px #aaa;
+	}
+	.gototop, .reflesh{
+		width: 32px;
+		height: 32px;
+		/*padding: 2px;*/
+		vertical-align: bottom;
+	}
+/*	.reflesh{
+		width: 23px;
+		height: 23px;
+		padding: 2px;
+	}*/
+	.footer{
+		text-align: center;
+		padding-bottom: 40px;
+		border-top: 1px dotted #ccc;
+		border-bottom: 1px dotted #ccc;
+		color: #666;
+
+	}
+	.lnb ul,
+	.aside ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.lnb{
+		text-shadow: 1px 1px 0 #333;
+	}
+	.lnb li{
+		margin: 1px 0;
+	}
+	.lnb a{
+		display: block;
+		background: #777;
+		padding: 0 10px;
+		height: 32px;
+		line-height: 32px;
+		text-decoration: none;
+		color: #fff;
+		-webkit-transition: .2s;
+		-moz-transition: .2s;
+		-ms-transition: .2s;
+		-o-transition: .2s;
+	}
+	.lnb :first-child>a{
+		border-radius: 4px 4px 0 0;
+	}
+	.lnb :last-child>a{
+		border-radius: 0 0 4px 4px;
+	}
+	.lnb a:hover,
+	.lnb a:focus{
+		background: #555;
+	}
+
+	.aside{
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		padding: 0 10px;
+	}
+	.aside h2{
+		display: block;
+		border-bottom: 1px solid #ddd;
+		font-size: 14px;
+		margin: 0;
+		line-height: 32px;
+	}
+	.aside ul{ß
+		padding: 10px 0;
+	}
+
+	.aside a{
+		display: inline-block;
+		line-height: 32px;
+	}
+	.addbutton{
+		width: 32px;
+		height: 32px;
+		vertical-align: bottom;
+	}
+/*MOBILE*/
+/*TABLET*/
+@media(min-width: 768px){
+
+}
+/*TABLET & DESKTOP*/
+@media(min-width: 768px) and (max-width: 1024px){
+
+}
+/*DESKTOP*/
+@media(min-width: 1025px){
+
+}

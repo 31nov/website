@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="css/addpage.css">
+		<title>즐겨찾기 추가</title>
+		<script langauge="javascript">
+			var checkflag = "false";
+			function check(field){
+				if (checkflag == "false") {
+					for (i = 0; i < field.length; i++) {
+						field[i].checked = true;
+					}
+					checkflag = "true";
+				}
+				else{
+					for (i = 0; i < field.length; i++) {
+						field[i].checked = false;
+					}
+					checkflag = "false";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<fieldset>
+			<legend>추가할 항목을 선택하세요.</legend>
+				<form name="form1" method="post1">
+					<fieldset>
+						<legend><input type="checkbox" onclick="this.value=check(this.form.list)"> 게임</legend>
+							<p><input type="checkbox" name="list" value="1"> RPG</p>
+							<p><input type="checkbox" name="list" value="2"> FPS</p>
+							<p><input type="checkbox" name="list" value="3"> PUZZLE</p>
+							<p><input type="checkbox" name="list" value="4"> ARCADE</p>
+							<p><input type="checkbox" name="list" value="5"> PARODY</p>
+					</fieldset>
+				</form>	
+				<form name="form2" method="post2">
+					<fieldset>
+						<legend><input type="checkbox" onclick="this.value=check(this.form.list1)"> 게임</legend>
+							<p><input type="checkbox" name="list1" value="6"> RPG</p>
+							<p><input type="checkbox" name="list1" value="7"> FPS</p>
+							<p><input type="checkbox" name="list1" value="8"> PUZZLE</p>
+							<p><input type="checkbox" name="list1" value="9"> ARCADE</p>
+							<p><input type="checkbox" name="list1" value="10"> PARODY</p>
+					</fieldset>
+				</form>	
+				<form name="form3" method="post3">
+					<fieldset>
+						<legend><input type="checkbox" onclick="this.value=check(this.form.list2)"> 게임</legend>
+							<p><input type="checkbox" name="list2" value="11"> RPG</p>
+							<p><input type="checkbox" name="list2" value="12"> FPS</p>
+							<p><input type="checkbox" name="list2" value="13"> PUZZLE</p>
+							<p><input type="checkbox" name="list2" value="14"> ARCADE</p>
+							<p><input type="checkbox" name="list2" value="15"> PARODY</p>
+					</fieldset>
+				</form>			
+
+		</fieldset>
+	</body>
+</html>

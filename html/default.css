@@ -1,14 +1,37 @@
-body
-{
-	background: black;
-}
-.header_body
-{
-	background: silver;
-	max-width: 960px;
-	margin: 0 auto;
-}
-.header_single
-{
-	background: orange;
-}
+@charset "utf-8"
+/*html reset*/
+	header, footer, section, article, nav, aside, main, figure, figcaption{
+		display: block;
+	}
+	html,
+	body{
+		min-height: 100%;
+	}
+	body
+	{
+		background: black;
+		margin: 0;
+	}
+	body, table, button, input, textarea, select{
+		font-size: 14px;
+	}
+/*All*/
+	.header_body
+	{
+		background: silver;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.header_single
+	{
+		background: orange;
+	}
+	#main{
+		box-shadow: 0 0 4px #999;
+		box-shadow: 0 0 4px rgba(0,0,0,.3);
+		min-height: 300px;
+	}
+/*MOBILE*/
+/*TABLET & DESKTOP*/
+/*TABLET*/
+/*DESKTOP*/
