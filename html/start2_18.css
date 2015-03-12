@@ -1,0 +1,32 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+	.header_body
+	{
+		background: silver;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.header_single
+	{
+		background: orange;
+	}
+	#main{
+		box-shadow: 0 0 4px #999;
+		box-shadow: 0 0 4px rgba(0,0,0,.3);
+		min-height: 300px;
+	}
+/*MOBILE*/
+@media (max-width: 768px){
+	h1{color: #f0f;}
+}
+/*TABLET*/
+@media (min-width: 769px) and (max-width: 1024px){
+	h1{color: #f00;}
+
+}
+/*DESKTOP*/
+@media (min-width: 1025px){
+	h1{color: #0f0;}
+
+}
