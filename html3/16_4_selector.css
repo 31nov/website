@@ -1,0 +1,18 @@
+div:before{
+	content: "메일을 입력하세요.";
+	display: block;
+
+}
+div [type]{
+	color: red;
+}
+div [type="email"]{
+	background: #00f;
+}
+div [type="submit"]{
+	background: #0f0;
+}
+div:after{
+	content: "abc@def.ghi의 메일 양식으로 넣어주세요.";
+	display: block;
+}
