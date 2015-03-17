@@ -13,6 +13,10 @@
 		background: #ddd;
 		position: relative;
 	}
+	.titleimage{
+		width: 80px;
+		height: auto;
+	}
 	#main{
 		box-shadow: 0 0 4px #999;
 		box-shadow: 0 0 4px rgba(0,0,0,.3);
