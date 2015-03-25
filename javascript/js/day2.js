@@ -170,8 +170,9 @@ fruits.length; // fruits 배열의 원소 개수
 fruits[fruits.length] = 'Mango';
 // 배열 마지막에 원소를 추가하는 방법2
 fruits.push('Mango');
-
+console.log(fruits);
 fruits.join(' + ');
+console.log(fruits);
 
 // 문제: 배열에 포함된 원소 갯수를 알아내서 반환하는 함수 arraySize()
 
