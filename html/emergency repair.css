@@ -1,0 +1,251 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+	.header_body{
+		background: silver;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.hiddenmenu{
+		display: none;
+	}
+	.header_single{
+		background: #ddd;
+		position: relative;
+	}
+	.titleimage{
+		width: 80px;
+		height: auto;
+	}
+	#main{
+		box-shadow: 0 0 4px #999;
+		box-shadow: 0 0 4px rgba(0,0,0,.3);
+		min-height: 1500px;
+	}
+/*MOBILE*/
+@media only all and (max-width: 768px){
+
+	body{
+		margin: 0;
+	}
+	h1{color: #f0f;}
+	.header_single{
+		position: relative;
+		height: 42px;
+	}
+	.header_single>h1{
+		display: none;
+	}
+
+	.gnb>h2,
+	.gnb>ul{
+		display: none;
+	}
+	.gamebtn{
+		position: absolute;
+		top: 0;
+		width: 32px;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		margin: 5px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+	}
+	.gamebtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}	
+	.gnbbtn{
+		position: fixed;
+		top: 36.5%;
+		width: 32px;
+		height: 192px;
+	 	border: 0;
+		padding: 0;
+		margin: -1px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+	}
+	.gnbbtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.search{
+		position: relative;
+		margin: 0 0 0 42px;
+        padding-right: 37px;
+        top: 0;
+        height: 42px;
+	}
+	.search [type="search"]{
+		position: relative;
+        top: 7px;
+        width: 100%;
+		background-color: #ddd;	
+		border: 0;
+		border-bottom: 2px solid #bdbdbd;
+        height: 32px;
+	}
+	.search [type="submit"]{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 32px;
+		height: 34px;
+		color: rgba(0, 0, 0, 0);
+		margin: 5px;
+		padding: 0;
+		border: 0;
+		background: rgba(0, 0, 0, 0);
+		border-bottom: 2px solid #bdbdbd;	
+	}
+	.search>button>img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.header_body{
+		position: relative;
+	}
+	#main{
+		position: relative;
+		margin: 42px 5px 5px 33px;
+	}
+	.lnb{
+		display: none;
+	}
+	.aside{
+		display: none;
+	}
+	.lnbbtn{
+		position: absolute;
+		margin: 47px 5px 5px 0;
+		top: 0;
+		right: 0;
+		left: 33px;
+		width: 100%;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+	}
+	.lnbbtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.bottommenu{
+		position: fixed;
+		width: 100%;
+		background: #ddd;
+		bottom: 0;
+	}
+		.gototop{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.gototop>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}	
+		.reflesh{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.reflesh>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}	
+		.setting{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.setting>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}	
+		.login{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.login>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	footer p{
+		text-align: center;
+		margin: 5px 0 70px 32px;
+	}
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px){
+		h1{color: #f00;}
+	.gamebtn{
+		display: none;
+	}
+
+}
+/*DESKTOP*/
+@media (min-width: 1025px){
+	h1{color: #0f0;}
+	.gamebtn{
+		display: none;
+	}
+
+}
