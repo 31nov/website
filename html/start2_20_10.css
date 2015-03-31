@@ -1,0 +1,253 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+	.header_body{
+		background: silver;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.hiddenmenu{
+		display: none;
+	}
+	.header_single{
+		background: #ddd;
+		position: relative;
+	}
+	.titleimage{
+		width: 80px;
+		height: auto;
+	}
+	#main{
+		box-shadow: 0 0 4px #999;
+		box-shadow: 0 0 4px rgba(0,0,0,.3);
+		min-height: 300px;
+	}
+/*MOBILE*/
+@media only all and (max-width: 768px){
+
+	body{
+		margin: 0;
+        overflow-x: hidden;
+	}
+	h1{color: #f0f;}
+	.header_single{
+		position: relative;
+		height: 42px;
+	}
+	.header_single>h1{
+		display: none;
+	}
+
+	.gnb>h2,
+	.gnb>ul{
+		display: none;
+	}
+	.gamebtn{
+		position: absolute;
+		top: 0;
+		width: 32px;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		margin: 5px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+	}
+	.gamebtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+    .gamelist{
+        position: absolute;
+        top: 42px;
+        margin: 0;
+        padding: 0;
+    }
+	.gnbbtn{
+		position: fixed;
+		top: 50%;
+		width: 32px;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		margin: -1px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+	}
+	.gnbbtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.search{
+		position: relative;
+		margin-left: 42px;
+        padding-right: 37px;
+    }
+	.search [type="search"]{
+		position: relative;
+        width: 100%;
+		background-color: #ddd;	
+		border: 0;
+		border-bottom: 2px solid #bdbdbd;
+        height: 32px;
+        top: 7px;
+	}
+	.search [type="submit"]{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 32px;
+		height: 34px;
+		color: rgba(0, 0, 0, 0);
+        margin: 0;
+		padding: 0;
+		margin: 5px;
+		border: 0;
+		background: rgba(0, 0, 0, 0);
+		border-bottom: 2px solid #bdbdbd;
+    }
+	.search>button>img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.header_body{
+		position: relative;
+	}
+	#main{
+		position: relative;
+		margin: 38px 5px 5px 33px;
+	}
+	.lnb{
+		display: none;
+	}
+	.aside{
+		display: none;
+	}
+    .lnbbtndiv{
+        position: absolute;
+        width: 100%;
+        top: 47px;
+        padding-left: 32px;
+        padding-right: 4.5px;
+        box-sizing: border-box;
+    }
+	.lnbbtn{
+        position: relative;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+	}
+	.lnbbtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.bottommenu{
+		position: fixed;
+		width: 100%;
+		background: #ddd;
+		bottom: 0;
+	}
+		.gototop{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.gototop>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}	
+		.menubarbtn{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.menubarbtn>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+        .userlogin{
+            position: absolute;
+            right: 0;
+        }
+            .login{
+                position: relative;
+                top: 0;
+                width: 32px;
+                height: 32px;
+                color: rgba(0, 0, 0, 0);
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background: rgba(0, 0, 0, 0);
+            }
+            .login>img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    footer{
+        position: absolute;
+        left: 32px;
+    }
+	footer p{
+		text-align: center;
+		margin: 5px 0 70px 32px;
+	}
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px){
+		h1{color: #f00;}
+	.gamebtn{
+		display: none;
+	}
+
+}
+/*DESKTOP*/
+@media (min-width: 1025px){
+	h1{color: #0f0;}
+	.gamebtn{
+		display: none;
+	}
+
+}
