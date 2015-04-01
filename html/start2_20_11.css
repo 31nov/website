@@ -28,8 +28,8 @@
 	body{
 		margin: 0;
         overflow-x: hidden;
-        max-width: inherit;
-	}
+        overflow: hidden;
+    }
 	h1{color: #f0f;}
 	.header_single{
 		position: relative;
