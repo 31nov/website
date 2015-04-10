@@ -94,6 +94,7 @@
 	.gnbbtn{
 		position: fixed;
 		top: 50%;
+        left: 0;
 		width: 32px;
 		height: 32px;
 	 	border: 0;
@@ -102,7 +103,7 @@
 		color: rgba(0, 0, 0, 0);
 		background: rgba(0, 0, 0, 0);
 		cursor: pointer;
-        z-index: 1;
+        z-index: 6;
 	}
 	.gnbbtn>img{
 		position: absolute;
@@ -258,6 +259,12 @@
 		text-align: center;
 		margin: 5px 0 70px 32px;
 	}
+    #point{
+        box-sizing: content-box;
+        margin: 2px;
+        background-color: blue;
+    }
+    
 }
 /*Tablet*/
 @media (min-width: 768px) and (max-width: 1024px){
