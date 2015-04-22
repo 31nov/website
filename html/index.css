@@ -1,0 +1,451 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+    body{
+        max-width: 768px;   
+        overflow-x: hidden;
+    }
+	.header_body{
+		max-width: 768px;
+		margin: 0 auto;
+	}
+	.hiddenmenu{
+		display: none;
+	}
+	.header_single{
+		background: #989898;
+		position: relative;
+	}
+	.titleimage{
+		width: 80px;
+		height: auto;
+	}
+	#main{
+		background: #FFF7EF;
+		box-shadow: 0 0 4px #FFCE9F;
+/*		box-shadow: 0 0 4px rgba(0,0,0,.3);*/
+		min-height: 2000px;
+	}
+/*MOBILE*/
+/*@media only all and (max-width: 768px){*/
+
+	body{
+		margin: 0;
+        overflow-x: hidden;
+    }
+	h1{color: #f0f;}
+	.header_single{
+		position: relative;
+		height: 42px;
+	}
+	.header_single>h1{
+		display: none;
+	}
+
+	.gnb>h2{
+		display: none;
+    }
+	.gnb>ul{
+		display: none;
+	}
+	.gamebtn{
+		position: absolute;
+		top: 0;
+		width: 32px;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		margin: 5px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+    }
+	.gamebtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+    .gamelist {
+        position: absolute;
+        top: 42px;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+        overflow-y:scroll;
+    }
+    .gamelist>li{
+        display: block;
+        width: 112px;
+        color: #fff;
+        font-size: 14px;
+        text-align: right;
+        padding: 3px;
+        background: #989898;   
+    }
+    #gamelistul {
+/*        background: #547812;*/
+        padding: 0;
+    }
+    #gamelistul li {
+        display: block;
+        height: 136px;
+        padding: 0;
+        background: #125441;
+    }
+    #gamelistul li:nth-child(even) {
+        background: #989898;
+    }
+    #gamelistul li:nth-child(odd) {
+        background: #666;
+    }
+    
+    #gamelistul li a{
+        position: relative;
+        text-decoration: none;
+        color: #fff;
+        font-style: normal;
+        display: block;   
+        width: 118px;
+        height: 130px;
+    }
+        .gameImg{
+            position: relative;
+            display: block;
+            width: 110px;
+            height: 110px;
+            margin: 0 4px 0 4px;
+            padding-top: 4px;
+        }
+        .gameTitle, .comment{
+            font-style: normal;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 100;
+        }
+        .gameTitle{
+            position: relative;
+            padding-left: 7px;   
+        }
+        .comment{
+            position: absolute;
+            right: 4px;
+            bottom: 0;
+            text-align: right;
+            font-size: 10px;
+        }
+    
+	.gnbbtn{
+		position: fixed;
+		top: 50%;
+        left: 0;
+		width: 32px;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		margin: -1px;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+        z-index: 2;
+	}
+	.gnbbtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+    .gnbMenu{
+        position: fixed;
+        width: 150px;
+        height: 100%;
+        display: block;
+        top: 42px;
+        left: -150px;
+        z-index: 2;
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+    }
+    .gnbMenu ul li,
+    .gnbMenu li,
+    .gnbMenu ul li a,
+    .gnbMenu li a{
+        list-style-type: none;
+        text-decoration: initial;
+        color: #000;
+        display: block;
+        height: 20px;
+    }
+    .gnbMenu a{
+        padding-left: 10px;
+    }
+    .gnbMenu >li{
+        background: #FFBD7E;
+    }
+    .gnbMenu >li >a{
+        display: block;
+        color: #fff;
+        font-weight: 600;
+        vertical-align:bottom;
+        height: auto;
+    }
+    .gnbMenu ul{
+        padding: 0;
+    }
+	.search{
+		position: relative;
+		margin-left: 42px;
+        padding-right: 37px;
+    }
+	.search [type="search"]{
+		position: relative;
+        width: 100%;
+		background-color: #989898;	
+		border: 0;
+		border-bottom: 2px solid #bdbdbd;
+        height: 32px;
+        top: 7px;
+	}
+	.search [type="submit"]{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 32px;
+		height: 34px;
+		color: rgba(0, 0, 0, 0);
+        margin: 0;
+		padding: 0;
+		margin: 5px;
+		border: 0;
+		background: rgba(0, 0, 0, 0);
+		border-bottom: 2px solid #bdbdbd;
+    }
+	.search>button>img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.header_body{
+		position: relative;
+	}
+/*main Line Start*/
+	#main{
+		position: relative;
+		margin: 5px 5px 5px 33px;
+	}
+    
+    #main> ul{
+        position: relative;
+        top: 0;
+        margin: 10px;
+        padding: 0;
+    }
+
+    #main> ul >li{
+        position: relative;
+        display: block;
+        padding: 0;
+        margin: 0;
+        top: 8px;
+        margin-top: 8px;
+        box-shadow: 0 0 4px #FFBD7E;
+        background: #fff;
+        cursor: pointer;
+
+    }
+        .writeUserInfor{
+            position: relative;
+            display:inline-block;
+            width: 70%;
+            height: 0;/*js 5.에서 설정*/
+            background: #666;
+        }
+            .userPic{
+                display: inline-block;
+                width: 0;/*js 5.에서 설정*/
+                height: 0;/*js 5.에서 설정*/
+                margin: 2px;
+            }
+            .userName{
+                position: absolute;
+                display: inline-block;
+                height: 23px;
+                top: 0;
+                text-align: middle;
+                margin: 0;
+                padding: 2px;
+                padding-top: 5px;
+            }
+            .writeDate{
+                position: absolute;
+                display: inline-block;
+                height: 40%;
+                bottom: 0;
+                text-align: middle;
+                font-size: 10px;
+                margin: 0;
+            }
+        .connectUser{
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            width: 30%;
+            height: 0;/*js 5.에서 설정*/
+            background: red;
+
+        }
+        .writeTitleDiv{
+            position: absolute;
+            top: 0;/*js 5.에서 설정*/
+            display:block;
+            width: 100%;
+            height: 0;/*js 5.에서 설정*/
+            background: yellow;
+        }
+        .countView{
+            position: absolute;
+            top: 0;/*js 5.에서 설정*/
+            display:block;
+            width: 100%;
+            height: 20px;
+/*            background: #eee;*/
+        }
+/*main Line End*/
+	.lnb{
+		display: none;
+	}
+	.aside{
+		display: none;
+	}
+    .lnbbtndiv{
+        position: absolute;
+        width: 100%;
+        top: 47px;
+        padding-left: 32px;
+        padding-right: 4.5px;
+        box-sizing: border-box;
+    }
+	.lnbbtn{
+        display: none;
+        position: relative;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 32px;
+	 	border: 0;
+		padding: 0;
+		color: rgba(0, 0, 0, 0);
+		background: rgba(0, 0, 0, 0);
+		cursor: pointer;
+	}
+	.lnbbtn>img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.bottommenu{
+		position: fixed;
+        max-width: 768px;   
+		width: 100%;
+		background: #989898;
+		bottom: 0;
+        z-index: 3;
+	}
+		.gototop{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.gototop>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}	
+		.menubarbtn{
+			position: relative;
+			top: 0;
+			width: 32px;
+			height: 32px;
+			color: rgba(0, 0, 0, 0);
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background: rgba(0, 0, 0, 0);
+		}
+		.menubarbtn>img{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+        .userlogin{
+            position: absolute;
+            right: 0;
+        }
+            .login{
+                position: relative;
+                top: 0;
+                width: 32px;
+                height: 32px;
+                color: rgba(0, 0, 0, 0);
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background: rgba(0, 0, 0, 0);
+            }
+            .login>img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    footer{
+        position: absolute;
+        left: 32px;
+    }
+	footer p{
+		text-align: center;
+		margin: 5px 0 70px 32px;
+	}
+    #point{
+        box-sizing: content-box;
+        margin: 2px;
+        background-color: blue;
+    }
+    
+/*}*/
+/*Tablet*/
+/*
+@media (min-width: 768px) and (max-width: 1024px){
+		h1{color: #f00;}
+	.gamebtn{
+		display: none;
+	}
+
+}
+DESKTOP
+@media (min-width: 1025px){
+	h1{color: #0f0;}
+	.gamebtn{
+		display: none;
+	}
+
+}
+*/
