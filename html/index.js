@@ -168,8 +168,8 @@ jQuery(function($){
             writeId: mainData.writes.length +1,
             writeDate: date,
             writeTitle: '게시글 목록 #'+i,
-            commentCount: '('+Math.floor(Math.random() *100)+')',
-            smileCount: '('+Math.floor(Math.random() *100)+')',
+            commentCount: Math.floor(Math.random() *100),
+            smileCount: Math.floor(Math.random() *100),
         };
         mainData.users.push(user);
         mainData.writes.push(write);
@@ -195,7 +195,6 @@ jQuery(function($){
     var $writeUserInfor = $('.writeUserInfor');
     var $userPic = $('.userPic');
     var $connectUser = $('.connectUser');
-    var $writeTitleDiv = $('.writeTitleDiv');
     var $countView = $('.countView');
     
     //5-2. mainList height 가변 값 만들기
@@ -205,8 +204,6 @@ jQuery(function($){
         $userPic.css({height:x-4});
         $userPic.css({width:x-4});
         $connectUser.css({height: x});
-        $writeTitleDiv.css({top:x}).css({height:y});
-//        $writeTitleDiv.css({height:y});
         $countView.css({top:x+y});        
     };
     mainListHeight(50,30);
