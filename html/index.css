@@ -13,19 +13,19 @@
 		display: none;
 	}
 	.header_single{
-		background: #989898;
 		position: relative;
+		background: #989898;
+        width: 100%;
+        height: 42px;
+        top: 0;
+        z-index: 3;
+
 	}
 	.titleimage{
 		width: 80px;
 		height: auto;
 	}
-	#main{
-		background: #FFF7EF;
-		box-shadow: 0 0 4px #FFCE9F;
-/*		box-shadow: 0 0 4px rgba(0,0,0,.3);*/
-		min-height: 2000px;
-	}
+
 /*MOBILE*/
 /*@media only all and (max-width: 768px){*/
 
@@ -34,10 +34,6 @@
         overflow-x: hidden;
     }
 	h1{color: #f0f;}
-	.header_single{
-		position: relative;
-		height: 42px;
-	}
 	.header_single>h1{
 		display: none;
 	}
@@ -73,7 +69,7 @@
         margin: 0;
         padding: 0;
         z-index: 3;
-        overflow-y:scroll;
+        overflow:scroll;
     }
     .gamelist>li{
         display: block;
@@ -235,6 +231,10 @@
 	}
 /*main Line Start*/
 	#main{
+		background: #FFF7EF;
+		box-shadow: 0 0 4px #FFCE9F;
+/*		box-shadow: 0 0 4px rgba(0,0,0,.3);*/
+		min-height: 2000px;
 		position: relative;
 		margin: 5px 5px 5px 33px;
 	}
@@ -325,6 +325,9 @@
                 margin: 2px;
                 width: auto;
                 height: 16px;
+            }
+            .countView span{
+                vertical-align: 4px;
             }
 /*main Line End*/
 	.lnb{
