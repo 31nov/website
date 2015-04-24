@@ -137,7 +137,7 @@ jQuery(function($){
             var $gnbLi = $('.gnbMenu li');
             var $gnbLiA = $('.gnbMenu li >a');
             if($(window).scrollTop() > head_singleHeight){
-                $gnbMenu.css({top: 0});
+//                $gnbMenu.css({top: 0});
                 $gnbLi.css({
                     height:gnbHeight/$gnbLi.length
                 });
@@ -209,43 +209,28 @@ jQuery(function($){
     mainListHeight(50,30);
 
     //6-1. scroll조작 시 head_single, bottommenu 보이고,사라지고...
+    var prevScrollTop = 0;
+    var $header_single = $('.header_single');
+    var $gamelist = $('.gamelist');
+    var $gnbbtn = $('.gnbbtn');
+    var $bottommenu = $('.bottommenu');
     $(window).on('scroll', function(event){
+        var $this = $(this);
+        var scrollTop = $this.scrollTop();
+		
         //6-2. 변수: scroll의 이전위치, 현재위치 체크
-        var preScroll = $(window).scrollTop();;
-        var currScroll = $(window).scrollTop();;
-        var $header_single = $('.header_single');
-        var $gamelist = $('.gamelist');
-        var $gnbbtn = $('.gnbbtn');
-        var $bottommenu = $('.bottommenu');
-        
-        //6-3. 이전 위치를 5초 후에 등록되도록 적용
-        currScroll = $(window).scrollTop();
-        console.log(currScroll);
-        function pre() {
-            preScroll = $(window).scrollTop();
+        if(scrollTop > prevScrollTop){ //스크롤을 내릴 때 & 내리고 멈춘 상태
+//            $header_single.animate({top:-42});
+            $header_single.css({visibility: 'hidden'}); 
+            $bottommenu.css({visibility: 'visible'}); 
+            $gnbbtn.css({visibility: 'visible'}); 
+        }else{ //스크롤을 올릴 때 & 올리고 멈춘 상태
+//            $header_single.animate({top:0});
+            $header_single.css({visibility: 'visible'}); 
+            $bottommenu.css({visibility: 'hidden'}); 
         }
-        setTimeout(pre, 5000);
-
-        //6-4. head_single 변화
-        if($(window).scrollTop() > 45){
-            $header_single.css({visibility:'hidden'}); 
-//            $header_single.css({position:'relative'}); 
-            $gamelist.css({visibility:'visible'}); 
-            $gnbbtn.css({visibility:'visible'}); 
-        }else{
-            $header_single.css({visibility:'visible'}); 
-        }
+        prevScrollTop = scrollTop;
         //6-5. 스크롤이 올라가고 있을 때
-        if(currScroll == --currScroll){
-            console.log('아래로');
-            //            $header_single.css({visibility:'hidden'}); 
-//            $header_single.css({position:'fixed'}); 
-//            $bottommenu.css({visibility:'visible'}); 
-        }else {
-            console.log('위로');
-//            $header_single.css({visibility:'hidden'}); 
-//            $bottommenu.css({visibility:'visible'}); 
-        }
     });
 });
 
