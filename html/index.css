@@ -4,17 +4,21 @@
     body{
         max-width: 768px;   
         overflow-x: hidden;
+        overflow: hidden;
+        background: #000;
     }
 	.header_body{
 		max-width: 768px;
 		margin: 0 auto;
+        background: #000;
 	}
 	.hiddenmenu{
 		display: none;
 	}
 	.header_single{
 		position: fixed;
-		background: #989898;
+		background: #ff0000;
+        max-width: 768px; 
         width: 100%;
         height: 42px;
         top: 0;
@@ -78,7 +82,7 @@
         font-size: 14px;
         text-align: right;
         padding: 3px;
-        background: #989898;   
+        background: #f00;   
     }
     #gamelistul {
 /*        background: #547812;*/
@@ -91,20 +95,21 @@
         background: #125441;
     }
     #gamelistul li:nth-child(even) {
-        background: #989898;
+        background: #f00;
     }
     #gamelistul li:nth-child(odd) {
-        background: #666;
+        background: #fff7f7;
     }
     
     #gamelistul li a{
         position: relative;
         text-decoration: none;
-        color: #fff;
+        color: #000;
         font-style: normal;
         display: block;   
         width: 118px;
         height: 130px;
+        font-weight: 400;
     }
         .gameImg{
             position: relative;
@@ -113,6 +118,7 @@
             height: 110px;
             margin: 0 4px 0 4px;
             padding-top: 4px;
+            border-radius: 15px;
         }
         .gameTitle, .comment{
             font-style: normal;
@@ -136,11 +142,12 @@
 		position: fixed;
 		top: 50%;
         left: 0;
-		width: 32px;
-		height: 32px;
+		width: 26px;
+		height: 45px;
 	 	border: 0;
 		padding: 0;
 		margin: -1px;
+        margin-left: 2px;
 		color: rgba(0, 0, 0, 0);
 		background: rgba(0, 0, 0, 0);
 		cursor: pointer;
@@ -150,6 +157,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+        margin: 0;
 		width: 100%;
 		height: 100%;
 	}
@@ -179,7 +187,7 @@
         padding-left: 10px;
     }
     .gnbMenu >li{
-        background: #FFBD7E;
+        background: #f00;
     }
     .gnbMenu >li >a{
         display: block;
@@ -193,31 +201,33 @@
     }
 	.search{
 		position: relative;
+        height: 42px;
 		margin-left: 42px;
         padding-right: 37px;
     }
 	.search [type="search"]{
 		position: relative;
         width: 100%;
-		background-color: #989898;	
+		background-color: #ff0000;	
 		border: 0;
-		border-bottom: 2px solid #bdbdbd;
+        padding: 0;
+/*		border-bottom: 2px solid #fff;*/
         height: 32px;
-        top: 7px;
+        top: 4px;
 	}
 	.search [type="submit"]{
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 32px;
-		height: 34px;
+		height: 32px;
 		color: rgba(0, 0, 0, 0);
         margin: 0;
 		padding: 0;
 		margin: 5px;
 		border: 0;
 		background: rgba(0, 0, 0, 0);
-		border-bottom: 2px solid #bdbdbd;
+/*		border-bottom: 2px solid #fff;*/
     }
 	.search>button>img{
 		width: 100%;
@@ -228,12 +238,10 @@
 	}
 	.header_body{
 		position: relative;
+        overflow: hidden;
 	}
 /*main Line Start*/
 	#main{
-		background: #FFF7EF;
-		box-shadow: 0 0 4px #FFCE9F;
-/*		box-shadow: 0 0 4px rgba(0,0,0,.3);*/
 		min-height: 2000px;
 		position: relative;
 		margin: 47px 5px 5px 33px;
@@ -242,93 +250,130 @@
     #main> ul{
         position: relative;
         top: 0;
-        margin: 10px;
+        margin: 0;
         padding: 0;
     }
 
     #main> ul >li{
         position: relative;
         display: block;
-        padding: 0;
+        padding: 10px 0;
         margin: 0;
-        top: 8px;
-        margin-top: 8px;
-        box-shadow: 0 0 4px #FFBD7E;
-        background: #fff;
         cursor: pointer;
-
+        height: 0;/*js 5.에서 설정*/
+        border-top: 1px solid #F66;
+    }
+    #main >ul >li:first-child{
+        border-top: 0;   
     }
         .writeUserInfor{
-            position: relative;
             display:inline-block;
-            margin-right: 30%;
-            width: 70%;
+            width: auto;
             height: 0;/*js 5.에서 설정*/
-/*            background: #666;*/
+            float: left;
         }
+            .writeUserInfor >a{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                float: left;
+            }
             .userPic{
                 display: inline-block;
                 width: 0;/*js 5.에서 설정*/
                 height: 0;/*js 5.에서 설정*/
                 margin: 2px;
+                border-radius: 4px;
+                float: left;
             }
             .userName{
-                position: absolute;
                 display: inline-block;
-                height: 23px;
-                top: 0;
-                text-align: middle;
                 margin: 0;
-                padding: 2px;
-                padding-top: 5px;
+                padding: 10px 0 0 6px;
+                color: #FFC519;
             }
             .writeDate{
-                position: absolute;
-                display: inline-block;
-                height: 40%;
-                bottom: 0;
-                text-align: middle;
+                padding-left: 60px;
                 font-size: 10px;
                 margin: 0;
+                color: #666;
             }
         .connectUser{
             position: absolute;
-            display: inline-block;
-            top: 0;
-            right: 0;
-            width: 30%;
+            margin: 0;
+            top: 10px;
+            right: 10px;
+            width: auto;
+            max-width: 40%;
             height: 0;/*js 5.에서 설정*/
-/*            background: red;*/
+            color: #c4daff;
+            font-size: 10px;
 
         }
+            .connectUser ul{
+                padding: 0;   
+            }
+            .connectUser li{
+                display: inline-block;
+                height: 35px;
+                width: 35px;
+                margin: 0 3px;
+                float: right;
+            }
+            .connectUser>ul>li>a{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+            .connectPic{
+                height: 100%;
+                width: 100%;
+/*                border: 1px solid yellow;*/
+                border-radius: 4px;
+            }
+
         .writeTitle{
             top: 0;/*js 5.에서 설정*/
-            margin: 0;
+            margin: 10px 0 10px 0;
             padding-left: 5px;
             width: 100%;
             height: 0;/*js 5.에서 설정*/
-            vertical-align: middle;
-/*            background: yellow;*/
+            color: #fff;
+            font-weight: 100;
+            float: left;
+/*            text-overflow: ellipsis;*/
         }
         .countView{
-            position: absolute;
             top: 0;/*js 5.에서 설정*/
-            display:block;
+            margin: 12px 0;
             width: 100%;
-            height: 20px;
+            height: 25px;
             font-size: 12px;
             color: #666;
-            text-align: right;
-/*            background: #eee;*/
+            float: left;
         }
-            .countView img{
-                margin: 2px;
-                width: auto;
-                height: 16px;
+            .countView div{
+                display: inline-block;
+                width: 30%;
+                float: left;
             }
-            .countView span{
-                vertical-align: 4px;
-            }
+                .countView span{
+                    display: inline-block;
+                    float: left;
+                }
+                .countView span:nth-child(even){
+                    display: inline;
+                    width: auto;
+                    line-height: 25px;
+                    vertical-align: middle;
+                    margin-left: 10%;
+                    text-align: right;
+                }
+                .countView img{
+                    width: auto;
+                    height: 20px;
+                    vertical-align: center;
+                }
 /*main Line End*/
 	.lnb{
 		display: none;
@@ -368,7 +413,7 @@
 		position: fixed;
         max-width: 768px;   
 		width: 100%;
-		background: #989898;
+		background: #f00;
 		bottom: 0;
         z-index: 3;
 	}

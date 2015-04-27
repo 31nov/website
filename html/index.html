@@ -71,27 +71,41 @@
 		<main id="main">
             <ul>
                 <li><!--게시판 리스트-->
-                    <div class="writeUserInfor"><!--inline block-->
-                        <a>
+                    <div class="writeUserInfor">
+                        <a><!--inline block-->
                             <img class="userPic"><!--작성자 사진-->
-                            <p class="userName"></p><!--작성자 명-->
-                            <img><!--친구여부 이미지-->
-                            <p class="writeDate"></p><!--작성 일자, 시간-->
                         </a>
                     </div>
+                    <span>
+                        <p class="userName"></p><br><!--작성자 명-->
+                        <p class="writeDate"></p><!--작성 일자, 시간-->
+                    </span>
                     <div class="connectUser"><!--inline block-->
-                        <a><span></span></a><!--친구 사진 최대 3개-->
-                        <a>
-                            <span></span><!--친구 more 개수 표시-->
-                            <span></span><!--친구 more ... 표시-->
-                        </a>
+                        friends..<br>
+                        <ul>
+                            <li>
+                                <a><img class="connectPic" src="user6.png"></a><!--친구여부 이미지-->
+                            </li>
+                            <li>
+                                <a><img class="connectPic" src="user8.png"></a><!--친구여부 이미지-->
+                            </li>
+                            <li>
+                                <a><img class="connectPic" src="user4.png"></a><!--친구여부 이미지-->
+                            </li>
+                        </ul>
+                        <span></span><!--친구 more 개수 표시-->
+                        <span></span><!--친구 more ... 표시-->
                     </div>
                     <span class="writeTitle"></span><!--게시글 제목-->
                     <div class="countView"><!--block-->
-                        <img src="commentIcon.png"><!--댓글 아이콘-->
-                        <span class="commentCount"></span><!--댓글 개수-->
-                        <img src="smileIcon.png"><!--smile 아이콘-->
-                        <span class="smileCount"></span><!--smile 개수-->
+                        <div>
+                            <span><img src="commentIcon.png"><!--댓글 아이콘--></span>
+                            <span class="commentCount"></span><!--댓글 개수-->
+                        </div>
+                        <div>
+                            <span><img src="smileIcon.png"><!--smile 아이콘--></span>
+                            <span class="smileCount"></span><!--smile 개수-->
+                        </div>
                     </div>
                 </li>
             </ul>

@@ -1,5 +1,8 @@
 //0-1. 전역 변수
 var date = new Date();
+year = date.getFullYear();
+month = date.getMonth();
+day = date.getDate();
 jQuery(function($){
     
     //1-1. gameList 변수
@@ -33,6 +36,10 @@ jQuery(function($){
 //            commentCount: '',
 //            smileCount: ''
     };
+    var friData = {
+        friends : []
+    };
+
     
     //1-2. game을 배열로 만들어, items에 넣기
     for(var i = 0; i < 100; i++){
@@ -59,31 +66,31 @@ jQuery(function($){
 		$gamelist.toggle("slide");
         if($gamebtnToggle.text() == '추천메뉴 열기'){
             $gamebtnToggle.text('추천메뉴 닫기');
-            $main.animate({left: '90px'});
-            $lnbbtn.animate({left: '90px'});
+            $main.stop().animate({left: '90px'});
+            $lnbbtn.stop().animate({left: '90px'});
             var target = 0;
                 if(toggleOn ==false){
                     target = 118;
                 }else{
                     target = 268;   
                 }
-                $gnbbtn.animate({left: target});
-                $gnbMenu.animate({left: target-150});
-                $footer.animate({left: '90px'});
+                $gnbbtn.stop().animate({left: target});
+                $gnbMenu.stop().animate({left: target-150});
+                $footer.stop().animate({left: '90px'});
                 
         }else{
             $gamebtnToggle.text('추천메뉴 열기');
-            $main.animate({left: '0'});
-            $lnbbtn.animate({left: '0'});
+            $main.stop().animate({left: '0'});
+            $lnbbtn.stop().animate({left: '0'});
             var target2 = 0;
                 if(toggleOn == false){
                     target2 = 0;
                 }else{
                     target2 = 150;   
                 }
-                $gnbbtn.animate({left:target2});
-                $gnbMenu.animate({left: target2-150});
-                $footer.animate({left: '32px'});         
+                $gnbbtn.stop().animate({left:target2});
+                $gnbMenu.stop().animate({left: target2-150});
+                $footer.stop().animate({left: '32px'});         
         }
     });	
 
@@ -99,24 +106,24 @@ jQuery(function($){
             
             $gnbbtnToggle.text('메뉴 닫기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
-                $(this).animate({left: 150},300);
+                $(this).stop().animate({left: 150},300);
                 $gnbMenu.css({display: 'block'});
-                $gnbMenu.animate({left: 0},300);
+                $gnbMenu.stop().animate({left: 0},300);
             }else{
-                $(this).animate({left: 268},300);
+                $(this).stop().animate({left: 268},300);
                 $gnbMenu.css({display: 'block'});
-                $gnbMenu.animate({left: 118},300);
+                $gnbMenu.stop().animate({left: 118},300);
             }
             toggleOn = true;
         }else{
             
             $gnbbtnToggle.text('메뉴 열기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
-                $(this).animate({left: 0},300);
-                $gnbMenu.animate({left: -150},300);
+                $(this).stop().animate({left: 0},300);
+                $gnbMenu.stop().animate({left: -150},300);
             }else{
-                $(this).animate({left: 118},300);
-                $gnbMenu.animate({left: -150},300);
+                $(this).stop().animate({left: 118},300);
+                $gnbMenu.stop().animate({left: -150},300);
             }
             $(window).off(".disableScroll");//스크롤 막기
             toggleOn =false;
@@ -166,8 +173,8 @@ jQuery(function($){
         };
         var write={
             writeId: mainData.writes.length +1,
-            writeDate: date,
-            writeTitle: '게시글 목록 #'+i,
+            writeDate: year+','+month+','+day,
+            writeTitle: '게시글 게시글 게시글 게시글 게시글  게시글 게시글제목 #'+i,
             commentCount: Math.floor(Math.random() *100),
             smileCount: Math.floor(Math.random() *100),
         };
@@ -183,12 +190,44 @@ jQuery(function($){
             .find('.writeTitle').text(mainData.writes[i].writeTitle).end()
             .find('.commentCount').text(mainData.writes[i].commentCount).end()
             .find('.smileCount').text(mainData.writes[i].smileCount).end()
-            .appendTo($mainUl);
+            .prependTo($mainUl);
     }
     
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////    
+//        var connectUser = Math.floor(Math.random() *(9-1)+1);
+//
+//    for(var z = 0; z < connectUser; z++){
+//        var connectUser2 = Math.floor(Math.random() *8);
+//        var friend={
+//            userPic1: 'user'+connectUser2+'.png'   
+//        };
+//        friData.friends.push(friend);
+//        console.log(friData.friends[0].userPic1);
+//    }
+//    
+//console.log('connectUser: '+connectUser);
+//console.log('connectUser2: '+connectUser2);
+//console.log('friends 길이: '+friData.friends.length);
+//    
+//    var $connectUserUl = $('.connectUser >ul');
+//    var $connectUserLi = $('.connectUser >ul >li').remove();
+//    console.log($connectUserLi);
+//    $connectUserLi.clone()
+//        .find('.connectPic').attr('src', 'user0.png').end()
+//        .appendTo($connectUserUl);
+//    
+    
+    
+    
+    
+//    console.log($connectUserLi.find('.connectPic'));
+ /////////////////////////////////////////////////////////////////////////////////////////////////////////  
+    
+    
+    
     //4-1. gnbMenu ul>li>a 색상 넣기
-    $('.gnbMenu > ul >li :even').css({background:'#FFEBD8'});
-    $('.gnbMenu > ul >li :odd').css({background:'#FFF7EF'});
+    $('.gnbMenu > ul >li :even').css({background:'#fff'});
+    $('.gnbMenu > ul >li :odd').css({background:'#fff'});
 
     //5-1. mainList 변수
     var $mainList = $('#main> ul >li');
@@ -206,7 +245,7 @@ jQuery(function($){
         $connectUser.css({height: x});
         $countView.css({top:x+y});        
     };
-    mainListHeight(50,30);
+    mainListHeight(60,30);
 
     //6-1. scroll조작 시 head_single, bottommenu 보이고,사라지고...
     var prevScrollTop = 0;
