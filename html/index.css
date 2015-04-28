@@ -10,7 +10,7 @@
 	.header_body{
 		max-width: 768px;
 		margin: 0 auto;
-        background: #000;
+/*        background: #000;*/
 	}
 	.hiddenmenu{
 		display: none;
@@ -163,9 +163,9 @@
 	}
     .gnbMenu{
         position: fixed;
+        background: #fff;
         width: 150px;
         height: 100%;
-        display: block;
         top: 42px;
         left: -150px;
         z-index: 2;
@@ -174,27 +174,44 @@
         margin: 0;
     }
     .gnbMenu ul li,
-    .gnbMenu li,
     .gnbMenu ul li a,
+    .gnbMenu li,
     .gnbMenu li a{
         list-style-type: none;
         text-decoration: initial;
         color: #000;
-        display: block;
-        height: 20px;
+        height: 32px;
     }
     .gnbMenu a{
-        padding-left: 10px;
+        display: block;
+        box-sizing: border-box;
+        padding: 6px 0 6px 10px;
+        height: 32px;
+        line-height: 20px;
+        vertical-align: bottom;
     }
     .gnbMenu >li{
-        background: #f00;
+        background: #c0c0c0;
     }
     .gnbMenu >li >a{
-        display: block;
-        color: #fff;
+        display: inline-block;
         font-weight: 600;
-        vertical-align:bottom;
-        height: auto;
+    }
+    .gnbMenu >li> button{
+        float: right;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        margin: 4px;
+        font-weight: 800;
+        font-size: 23px;
+        line-height: 14px;
+        border-radius: 4px;
+        background: #fff;
+        color: #c0c0c0;
+    }
+    .gnbMenu li{
+        display: block;
     }
     .gnbMenu ul{
         padding: 0;
@@ -242,7 +259,7 @@
 	}
 /*main Line Start*/
 	#main{
-		min-height: 2000px;
+		min-height: 200px;
 		position: relative;
 		margin: 47px 5px 5px 33px;
 	}
@@ -290,10 +307,12 @@
                 display: inline-block;
                 margin: 0;
                 padding: 10px 0 0 6px;
-                color: #FFC519;
+                color: #000;
+/*                color: #FFC519;*/
             }
             .writeDate{
-                padding-left: 60px;
+                display: inline-block;
+                padding-left: 6px;
                 font-size: 10px;
                 margin: 0;
                 color: #666;
@@ -306,7 +325,6 @@
             width: auto;
             max-width: 40%;
             height: 0;/*js 5.에서 설정*/
-            color: #c4daff;
             font-size: 10px;
 
         }
@@ -331,21 +349,26 @@
 /*                border: 1px solid yellow;*/
                 border-radius: 4px;
             }
-
-        .writeTitle{
-            top: 0;/*js 5.에서 설정*/
-            margin: 10px 0 10px 0;
-            padding-left: 5px;
+        .writeDiv{
             width: 100%;
-            height: 0;/*js 5.에서 설정*/
-            color: #fff;
-            font-weight: 100;
-            float: left;
-/*            text-overflow: ellipsis;*/
+            line-height: 25px;
+            margin-top: 12px;
+            text-overflow: ellipsis;
+        }
+            .writeDiv > sup{
+                display: inline-block;
+                margin-right: 5px;
+            }
+            .writeTitle{
+                display: inline-block;
+                top: 0;/*js 5.에서 설정*/
+                height: 0;/*js 5.에서 설정*/
+                font-weight: 300;
+                text-overflow: ellipsis;
         }
         .countView{
             top: 0;/*js 5.에서 설정*/
-            margin: 12px 0;
+            margin: 3px 0;
             width: 100%;
             height: 25px;
             font-size: 12px;
@@ -476,19 +499,29 @@
                 left: 0;
             }
     footer{
-        position: absolute;
-        left: 32px;
+		margin: 30px 0 50px 0px;
+        border-top: 1px solid #808080;
+        position: relative;
     }
 	footer p{
 		text-align: center;
-		margin: 5px 0 70px 32px;
+        color: #808080;
 	}
     #point{
         box-sizing: content-box;
         margin: 2px;
         background-color: blue;
     }
-    
+/*
+#test{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    background: blue;
+}
+*/
 /*}*/
 /*Tablet*/
 /*

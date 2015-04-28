@@ -129,41 +129,7 @@ jQuery(function($){
             toggleOn =false;
         }
     });
-    
-    //2-4.gnblist moving
-    $('.gnbbtn').on('click',function(event){
-    $(window).trigger('scroll');
-//        console.log($(window).scrollTop());
-        $(window).on('scroll',function(event){
-            //gnbMenu 높이 맞추기
-            var gnbHeight = $(window).height()-$('.bottommenu').height();
-            var head_singleHeight = $('.header_single').height();
-            $gnbMenu.css({'height':gnbHeight-head_singleHeight});
-
-            //gnbList 높이 맞추기
-            var $gnbLi = $('.gnbMenu li');
-            var $gnbLiA = $('.gnbMenu li >a');
-            if($(window).scrollTop() > head_singleHeight){
-//                $gnbMenu.css({top: 0});
-                $gnbLi.css({
-                    height:gnbHeight/$gnbLi.length
-                });
-                $gnbLiA.css({
-                    height:gnbHeight/$gnbLi.length
-                });
-            }else{
-                $gnbMenu.css({top: head_singleHeight-$(window).scrollTop()});
-                $gnbLi.css({
-                    height:(gnbHeight-head_singleHeight)/$gnbLi.length
-                });
-                $gnbLiA.css({
-                    height:(gnbHeight-head_singleHeight)/$gnbLi.length
-                });
-            }
-        });
-    });
-    
-    //3-2. 게시판 리스트 작성
+     //3-2. 게시판 리스트 작성
     for(var i = 0; i < 100; i++){
         var j = i%4
         var user ={
@@ -174,7 +140,7 @@ jQuery(function($){
         var write={
             writeId: mainData.writes.length +1,
             writeDate: year+','+month+','+day,
-            writeTitle: '게시글 게시글 게시글 게시글 게시글  게시글 게시글제목 #'+i,
+            writeTitle: '가나다라마바사아자차카타파',
             commentCount: Math.floor(Math.random() *100),
             smileCount: Math.floor(Math.random() *100),
         };
@@ -187,6 +153,7 @@ jQuery(function($){
             .find('.userPic').attr('src', mainData.users[i].userPic).end()
             .find('.userName').text(mainData.users[i].userName).end()
             .find('.writeDate').text(mainData.writes[i].writeDate).end()
+            .find('.writeTitle').before('<sup>No.'+mainData.writes[i].writeId+'</sup>').end()
             .find('.writeTitle').text(mainData.writes[i].writeTitle).end()
             .find('.commentCount').text(mainData.writes[i].commentCount).end()
             .find('.smileCount').text(mainData.writes[i].smileCount).end()
@@ -225,9 +192,9 @@ jQuery(function($){
     
     
     
-    //4-1. gnbMenu ul>li>a 색상 넣기
-    $('.gnbMenu > ul >li :even').css({background:'#fff'});
-    $('.gnbMenu > ul >li :odd').css({background:'#fff'});
+//    //4-1. gnbMenu ul>li>a 색상 넣기
+//    $('.gnbMenu > ul >li :even').css({background:'#fff'});
+//    $('.gnbMenu > ul >li :odd').css({background:'#fff'});
 
     //5-1. mainList 변수
     var $mainList = $('#main> ul >li');
@@ -260,16 +227,64 @@ jQuery(function($){
         //6-2. 변수: scroll의 이전위치, 현재위치 체크
         if(scrollTop > prevScrollTop){ //스크롤을 내릴 때 & 내리고 멈춘 상태
 //            $header_single.animate({top:-42});
-            $header_single.css({visibility: 'hidden'}); 
-            $bottommenu.css({visibility: 'visible'}); 
+            $header_single.css({visibility: 'hidden'}).removeClass("v").addClass("h"); 
+            $bottommenu.css({visibility: 'visible'}).addClass("v").removeClass("h"); 
             $gnbbtn.css({visibility: 'visible'}); 
         }else{ //스크롤을 올릴 때 & 올리고 멈춘 상태
 //            $header_single.animate({top:0});
-            $header_single.css({visibility: 'visible'}); 
-            $bottommenu.css({visibility: 'hidden'}); 
+            $header_single.css({visibility: 'visible'}).addClass("v").removeClass("h"); 
+            $bottommenu.css({visibility: 'hidden'}).removeClass("v").addClass("h"); 
         }
         prevScrollTop = scrollTop;
         //6-5. 스크롤이 올라가고 있을 때
+    });
+    
+    
+    //2-5. gnbMenu 높이와 너비 맞추기
+    // (6-2)의 class 추가/삭제를 이용해 .is() 체크
+    $gnbbtn.on('click',function(event){
+        //2-4.gnblist moving
+        var head_singleHeight = $('.header_single').height();
+        var bottommenuHeight = $('.bottommenu').height();
+        var gnbHeight = $(window).height()-head_singleHeight;
+        var $gnbLi = $('.gnbMenu li');
+        var $gnbLiA = $('.gnbMenu li >a');
+        if($header_single.is('.v')){
+            //위아래 다 보일 때
+            if($bottommenu.is('.v')){
+                $gnbMenu.css({top: head_singleHeight});
+                $gnbMenu.css('height', gnbHeight-bottommenuHeight+'px');
+                
+//                $gnbLi.css('line-height', (gnbHeight-bottommenuHeight)/$gnbLi.length+'px');
+//                $gnbLiA.css('line-height',(gnbHeight-bottommenuHeight)/$gnbLi.length+'px');
+            }
+            //위만 보일 때
+            else if($bottommenu.is('.h')){
+                $gnbMenu.css({top: head_singleHeight});
+                $gnbMenu.css('height',gnbHeight+'px');
+                
+//                $gnbLi.css('line-height', (gnbHeight)/$gnbLi.length+'px');
+//                $gnbLiA.css('line-height',(gnbHeight)/$gnbLi.length+'px');
+            }
+        }else if($header_single.is('.h')){
+            $gnbMenu.css({visibility: 'visible'});
+            //아래만 보일 때
+            if($bottommenu.is('.v')){
+                $gnbMenu.css({top: 0});
+                $gnbMenu.css('height', gnbHeight+head_singleHeight-bottommenuHeight+'px');
+                
+//                $gnbLi.css('line-height', (gnbHeight+head_singleHeight-bottommenuHeight)/$gnbLi.length+'px');
+//                $gnbLiA.css('line-height', (gnbHeight+head_singleHeight-bottommenuHeight)/$gnbLi.length+'px');
+            }
+            //모두 안보일 때
+            else if($bottommenu.is('.h')){
+                $gnbMenu.css({top:0});
+                $gnbMenu.css({height:gnbHeight+head_singleHeight});
+                
+//                $gnbLi.css('line-height',(gnbHeight+head_singleHeight)/$gnbLi.length);
+//                $gnbLiA.css('line-height',(gnbHeight+head_singleHeight)/$gnbLi.length);
+            }
+        }
     });
 });
 

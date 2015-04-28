@@ -10,7 +10,7 @@
 	<div class="header_body">
 		<a href="#main" class="hiddenmenu">메뉴 건너띄기</a>
 		<header>
-			<div class="header_single">
+			<div class="header_single v">
 				<h1><img class="titleimage" src="31nov_ver01.png">31nov 메인 페이지</h1>
 				<nav class="gnb">
 				  <button class="gamebtn" type="button">
@@ -36,27 +36,39 @@
 
 					<h2>전체 메뉴</h2>
 					<ul class="gnbMenu">
-						<li><a href="news">뉴스</a></li>
+						<li>
+                            <a href="news">뉴스</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
 							<ul>
 								<li><a href="news1">한국 뉴스</a></li>
 								<li><a href="news2">중국 뉴스</a></li>
 								<li><a href="news3">일본 뉴스</a></li>
 								<li><a href="news4">미국 뉴스</a></li>	
 							</ul>
-						<li><a href="review">리뷰</a></li>
+						<li>
+                            <a href="review">리뷰</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
 							<ul>
 								<li><a href="review1">한국 리뷰</a></li>
 								<li><a href="review2">중국 리뷰</a></li>
 								<li><a href="review3">일본 리뷰</a></li>
 								<li><a href="revu기ew4">미국 리뷰</a></li>
 							</ul>
-						<li><a href="forum">포럼</a></li>
+						<li>
+                            <a href="forum">포럼</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
 							<ul>
 								<li><a href="forum1">게임 포럼</a></li>
 								<li><a href="forum2">스마트폰 포럼</a></li>
 								<li><a href="forum3">자동차 포럼</a></li>
 							</ul>
-						<li><a href="community">커뮤니티</a></li>
+						<li>
+                            <a href="community">커뮤니티</a>
+                            <button type="button" name="+" value="addTagname">+</button>
+                        </li>
 					</ul>	
 				</nav>
 				<form class="search" action="search.html">
@@ -96,7 +108,9 @@
                         <span></span><!--친구 more 개수 표시-->
                         <span></span><!--친구 more ... 표시-->
                     </div>
-                    <span class="writeTitle"></span><!--게시글 제목-->
+                    <div class="writeDiv">
+                        <span class="writeTitle"></span><!--게시글 제목-->
+                    </div>
                     <div class="countView"><!--block-->
                         <div>
                             <span><img src="commentIcon.png"><!--댓글 아이콘--></span>
@@ -148,7 +162,7 @@
 				<li><a href="#">참고 링크3</a></li>
 			</ul>
 		</aside>
-		<div class="bottommenu">
+		<div class="bottommenu v">
 <!--
 			<button class="gototop" type="button">
 				<img src="gototop.png">
@@ -185,6 +199,11 @@
 			<p>Copyright &copy; 31nov All rights reserved.</p>
 		</footer>
 	</div>
+<!--
+    <div id="test">
+        확인
+    </div>
+-->
     <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
     <script src="index.js"></script>
 </body>
