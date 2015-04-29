@@ -63,34 +63,35 @@ jQuery(function($){
     
     //2-2. gamebtn 토글 버튼	
 	$gamebtn.on('click',function(){
+//        $gamelist.css({top: $(window).scrollTop()});
 		$gamelist.toggle("slide");
         if($gamebtnToggle.text() == '추천메뉴 열기'){
             $gamebtnToggle.text('추천메뉴 닫기');
-            $main.stop().animate({left: '90px'});
-            $lnbbtn.stop().animate({left: '90px'});
+            $main.animate({left: '90px'});
+            $lnbbtn.animate({left: '90px'});
             var target = 0;
                 if(toggleOn ==false){
                     target = 118;
                 }else{
                     target = 268;   
                 }
-                $gnbbtn.stop().animate({left: target});
-                $gnbMenu.stop().animate({left: target-150});
-                $footer.stop().animate({left: '90px'});
+                $gnbbtn.animate({left: target});
+                $gnbMenu.animate({left: target-150});
+                $footer.animate({left: '90px'});
                 
         }else{
             $gamebtnToggle.text('추천메뉴 열기');
-            $main.stop().animate({left: '0'});
-            $lnbbtn.stop().animate({left: '0'});
+            $main.animate({left: '0'});
+            $lnbbtn.animate({left: '0'});
             var target2 = 0;
                 if(toggleOn == false){
                     target2 = 0;
                 }else{
                     target2 = 150;   
                 }
-                $gnbbtn.stop().animate({left:target2});
-                $gnbMenu.stop().animate({left: target2-150});
-                $footer.stop().animate({left: '32px'});         
+                $gnbbtn.animate({left:target2});
+                $gnbMenu.animate({left: target2-150});
+                $footer.animate({left: '32px'});         
         }
     });	
 
@@ -106,24 +107,24 @@ jQuery(function($){
             
             $gnbbtnToggle.text('메뉴 닫기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
-                $(this).stop().animate({left: 150},300);
+                $(this).animate({left: 150},300);
                 $gnbMenu.css({display: 'block'});
-                $gnbMenu.stop().animate({left: 0},300);
+                $gnbMenu.animate({left: 0},300);
             }else{
-                $(this).stop().animate({left: 268},300);
+                $(this).animate({left: 268},300);
                 $gnbMenu.css({display: 'block'});
-                $gnbMenu.stop().animate({left: 118},300);
+                $gnbMenu.animate({left: 118},300);
             }
             toggleOn = true;
         }else{
             
             $gnbbtnToggle.text('메뉴 열기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
-                $(this).stop().animate({left: 0},300);
-                $gnbMenu.stop().animate({left: -150},300);
+                $(this).animate({left: 0},300);
+                $gnbMenu.animate({left: -150},300);
             }else{
-                $(this).stop().animate({left: 118},300);
-                $gnbMenu.stop().animate({left: -150},300);
+                $(this).animate({left: 118},300);
+                $gnbMenu.animate({left: -150},300);
             }
             $(window).off(".disableScroll");//스크롤 막기
             toggleOn =false;
@@ -151,9 +152,9 @@ jQuery(function($){
     for(var i = 0; i < mainData.writes.length; i++){
         $mainLi.clone()
             .find('.userPic').attr('src', mainData.users[i].userPic).end()
+            .find('.scatchTape').after('<sup>No.'+mainData.writes[i].writeId+'</sup>').end()
             .find('.userName').text(mainData.users[i].userName).end()
             .find('.writeDate').text(mainData.writes[i].writeDate).end()
-            .find('.writeTitle').before('<sup>No.'+mainData.writes[i].writeId+'</sup>').end()
             .find('.writeTitle').text(mainData.writes[i].writeTitle).end()
             .find('.commentCount').text(mainData.writes[i].commentCount).end()
             .find('.smileCount').text(mainData.writes[i].smileCount).end()
@@ -199,16 +200,19 @@ jQuery(function($){
     //5-1. mainList 변수
     var $mainList = $('#main> ul >li');
     var $writeUserInfor = $('.writeUserInfor');
+    var $writeUserInforA = $('.writeUserInfor >a');
     var $userPic = $('.userPic');
     var $connectUser = $('.connectUser');
     var $countView = $('.countView');
     
     //5-2. mainList height 가변 값 만들기
     function mainListHeight(x,y){
-        $mainList.css({height:x+y+20});
-        $writeUserInfor.css({height: x});
-        $userPic.css({height:x-4});
-        $userPic.css({width:x-4});
+        $mainList.css({height:x+y});
+        $writeUserInfor.css({height: x-8});
+        $writeUserInforA.css({height: x});
+        $writeUserInforA.css({width: x});
+        $userPic.css({height:x-12});
+        $userPic.css({width:x-12});
         $connectUser.css({height: x});
         $countView.css({top:x+y});        
     };
@@ -220,16 +224,22 @@ jQuery(function($){
     var $gamelist = $('.gamelist');
     var $gnbbtn = $('.gnbbtn');
     var $bottommenu = $('.bottommenu');
+    
     $(window).on('scroll', function(event){
         var $this = $(this);
         var scrollTop = $this.scrollTop();
-		
         //6-2. 변수: scroll의 이전위치, 현재위치 체크
         if(scrollTop > prevScrollTop){ //스크롤을 내릴 때 & 내리고 멈춘 상태
-//            $header_single.animate({top:-42});
-            $header_single.css({visibility: 'hidden'}).removeClass("v").addClass("h"); 
-            $bottommenu.css({visibility: 'visible'}).addClass("v").removeClass("h"); 
-            $gnbbtn.css({visibility: 'visible'}); 
+            if($gamelist.css("display") == 'block'){
+    //            $header_single.animate({top:-42});
+                $header_single.css({visibility: 'visible'}).removeClass("h").addClass("v"); 
+                $gnbbtn.css({visibility: 'visible'});                 
+            }else{
+    //            $header_single.animate({top:-42});
+                $header_single.css({visibility: 'hidden'}).removeClass("v").addClass("h"); 
+                $bottommenu.css({visibility: 'visible'}).addClass("v").removeClass("h"); 
+                $gnbbtn.css({visibility: 'visible'}); 
+            }
         }else{ //스크롤을 올릴 때 & 올리고 멈춘 상태
 //            $header_single.animate({top:0});
             $header_single.css({visibility: 'visible'}).addClass("v").removeClass("h"); 
@@ -254,17 +264,11 @@ jQuery(function($){
             if($bottommenu.is('.v')){
                 $gnbMenu.css({top: head_singleHeight});
                 $gnbMenu.css('height', gnbHeight-bottommenuHeight+'px');
-                
-//                $gnbLi.css('line-height', (gnbHeight-bottommenuHeight)/$gnbLi.length+'px');
-//                $gnbLiA.css('line-height',(gnbHeight-bottommenuHeight)/$gnbLi.length+'px');
             }
             //위만 보일 때
             else if($bottommenu.is('.h')){
                 $gnbMenu.css({top: head_singleHeight});
                 $gnbMenu.css('height',gnbHeight+'px');
-                
-//                $gnbLi.css('line-height', (gnbHeight)/$gnbLi.length+'px');
-//                $gnbLiA.css('line-height',(gnbHeight)/$gnbLi.length+'px');
             }
         }else if($header_single.is('.h')){
             $gnbMenu.css({visibility: 'visible'});
@@ -272,19 +276,48 @@ jQuery(function($){
             if($bottommenu.is('.v')){
                 $gnbMenu.css({top: 0});
                 $gnbMenu.css('height', gnbHeight+head_singleHeight-bottommenuHeight+'px');
-                
-//                $gnbLi.css('line-height', (gnbHeight+head_singleHeight-bottommenuHeight)/$gnbLi.length+'px');
-//                $gnbLiA.css('line-height', (gnbHeight+head_singleHeight-bottommenuHeight)/$gnbLi.length+'px');
             }
             //모두 안보일 때
             else if($bottommenu.is('.h')){
                 $gnbMenu.css({top:0});
                 $gnbMenu.css({height:gnbHeight+head_singleHeight});
-                
-//                $gnbLi.css('line-height',(gnbHeight+head_singleHeight)/$gnbLi.length);
-//                $gnbLiA.css('line-height',(gnbHeight+head_singleHeight)/$gnbLi.length);
             }
         }
+    });
+    //7-1. 색상 넣기
+    function mainColor(w,x,y,z){
+        //w: user 배경
+        //x: 테두리
+        //y: 배경
+        //z: 리스트 배경
+        $('.writeUserInfor').css({background:w});
+        $('.header_single').css({background:x});
+        $('.gamelist>li').css({background:x});
+        $('#gamelistul li:nth-child(even)').css({background:x});
+        $('.search [type="search"]').css({background:x});
+        $('.bottommenu').css({background:x});
+        $('.header_body').css({background:y});
+        $('#main>ul>li').css({background:z});
+        $('.circle').css({background:z});
+        $('.circle1').css({background:y});
+        $('.bottommenu > button').css({background:w});
+    }
+    mainColor('#f3bbcc','#233F61','#F6F1DB','#F294AD');
+//    mainColor('#F294AD','#F279A6','#C0D3C7','#7BA595');
+//    mainColor('#F2949C','#F2949C','#C0D3C7','#7BA595');
+//    mainColor('#DAD0D0','#233F61','#F6F1DB','#B57D9D');
+    
+    //8-1. 일정 위치에 있을 때 내용 보이기
+    var $list = $('#main>ul>li');
+    var $listTop = $list.offset().top;
+    $(document).on('scroll',function(event){
+        if($listTop > 42 && $listTop < 137){
+            $list.css({height: 150});
+    //        $('.overView').removeClass('hiddenView');   
+        }
+            $list.css({heigth : 90});
+    //    $('.overView').addClass('hiddenView');   
+
     });
 });
 

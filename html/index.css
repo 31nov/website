@@ -10,19 +10,19 @@
 	.header_body{
 		max-width: 768px;
 		margin: 0 auto;
-/*        background: #000;*/
+/*        background: #D9B779;*/
 	}
 	.hiddenmenu{
 		display: none;
 	}
 	.header_single{
 		position: fixed;
-		background: #ff0000;
+		background: #F28972;
         max-width: 768px; 
         width: 100%;
         height: 42px;
         top: 0;
-        z-index: 3;
+        z-index: 4;
 
 	}
 	.titleimage{
@@ -69,6 +69,7 @@
 	}
     .gamelist {
         position: absolute;
+        display: none;
         top: 42px;
         margin: 0;
         padding: 0;
@@ -82,7 +83,7 @@
         font-size: 14px;
         text-align: right;
         padding: 3px;
-        background: #f00;   
+        background: #F28972;   
     }
     #gamelistul {
 /*        background: #547812;*/
@@ -92,10 +93,9 @@
         display: block;
         height: 136px;
         padding: 0;
-        background: #125441;
     }
     #gamelistul li:nth-child(even) {
-        background: #f00;
+        background: #F28972;
     }
     #gamelistul li:nth-child(odd) {
         background: #fff7f7;
@@ -225,7 +225,7 @@
 	.search [type="search"]{
 		position: relative;
         width: 100%;
-		background-color: #ff0000;	
+		background-color: #F28972;	
 		border: 0;
         padding: 0;
 /*		border-bottom: 2px solid #fff;*/
@@ -274,25 +274,108 @@
     #main> ul >li{
         position: relative;
         display: block;
-        padding: 10px 0;
-        margin: 0;
+        box-sizing: border-box;
+        padding: 2px 15px;
+        margin: 5px 0;
         cursor: pointer;
         height: 0;/*js 5.에서 설정*/
-        border-top: 1px solid #F66;
+        background: #F2EEAE;
+        border-radius: 5px;
     }
+    #main sup{
+        position: absolute;
+        top: 9px;
+        left: 18px;
+        display: block;
+        margin: 0 4px;
+        font-size: 10px;
+        color: #666;
+    }
+    .scatchTape{
+        position: absolute;
+        width: 70px;
+        height: 17.4px;
+        top: 6px;
+        left: 14px;
+    }
+    .scatchTape>div:nth-child(odd){
+        box-sizing: border-box;
+        border-right: 3.4px solid transparent;
+        border-left: 3.4px solid transparent;
+        border-top: 3.4px solid #f3bbcc;
+    }
+    .scatchTape>div:nth-child(even){
+        box-sizing: border-box;
+        border-right: 3.4px solid transparent;
+        border-left: 3.4px solid transparent;
+        border-bottom: 3.4px solid #f3bbcc;
+        
+    }
+    .scatchTape>div{
+        height: 17%;
+        
+    }
+        .triangle1{
+            top: 0;
+        }
+        .triangle2{
+            top: 3.4px;   
+        }
+        .triangle3{
+            top: 6.8px;   
+        }
+        .triangle4{
+            top: 10.2px;   
+        }
+        .triangle5{
+            top: 13.6px;   
+        }
+        .triangle6{
+            top: 17px;   
+        }
+    .circle1{
+        position: absolute;
+        width: 5px;
+        height: 10px;
+    }
+        .a{
+            top: 15px;
+        }
+        .b{
+            top: 40px;
+        }
+        .c{
+            top: 65px;
+        }
+        .d{
+            left: 0px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .e{
+            right: 0px;   
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
     #main >ul >li:first-child{
         border-top: 0;   
     }
         .writeUserInfor{
             display:inline-block;
-            width: auto;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: #F2949C;
+            width: 160px;
             height: 0;/*js 5.에서 설정*/
             float: left;
         }
             .writeUserInfor >a{
                 display: inline-block;
-                width: 100%;
-                height: 100%;
+                width: 0;/*js 5.에서 설정*/
+                height: 0;/*js 5.에서 설정*/
                 float: left;
             }
             .userPic{
@@ -306,7 +389,7 @@
             .userName{
                 display: inline-block;
                 margin: 0;
-                padding: 10px 0 0 6px;
+                padding: 32px 0 0 6px;
                 color: #000;
 /*                color: #FFC519;*/
             }
@@ -316,6 +399,14 @@
                 font-size: 10px;
                 margin: 0;
                 color: #666;
+            }
+            .circle{
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
             }
         .connectUser{
             position: absolute;
@@ -350,22 +441,21 @@
                 border-radius: 4px;
             }
         .writeDiv{
-            width: 100%;
-            line-height: 25px;
-            margin-top: 12px;
+            display: inline-block;
+            box-sizing: border-box;
+            margin-top: 41px;
+            margin-left: 13px;
+            height: 20px;
             text-overflow: ellipsis;
         }
-            .writeDiv > sup{
-                display: inline-block;
-                margin-right: 5px;
-            }
             .writeTitle{
                 display: inline-block;
-                top: 0;/*js 5.에서 설정*/
-                height: 0;/*js 5.에서 설정*/
                 font-weight: 300;
                 text-overflow: ellipsis;
         }
+        .hiddenView{
+            display: none;
+        }   
         .countView{
             top: 0;/*js 5.에서 설정*/
             margin: 3px 0;
@@ -434,57 +524,50 @@
 	}
 	.bottommenu{
 		position: fixed;
+        box-sizing: border-box;
         max-width: 768px;   
 		width: 100%;
-		background: #f00;
+        height: 40px;
+        padding: 4px;
+		background: #F28972;
 		bottom: 0;
         z-index: 3;
 	}
-		.gototop{
-			position: relative;
-			top: 0;
-			width: 32px;
-			height: 32px;
-			color: rgba(0, 0, 0, 0);
-			margin: 0;
-			padding: 0;
-			border: 0;
-			background: rgba(0, 0, 0, 0);
-		}
-		.gototop>img{
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}	
-		.menubarbtn{
-			position: relative;
-			top: 0;
-			width: 32px;
-			height: 32px;
-			color: rgba(0, 0, 0, 0);
-			margin: 0;
-			padding: 0;
-			border: 0;
-			background: rgba(0, 0, 0, 0);
-		}
-		.menubarbtn>img{
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+    .bottommenu >button{
+        position: relative;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        color: rgba(0, 0, 0, 0);
+        margin: 0 5px;
+        padding: 0;
+        border: 0;
+        border-radius: 16px;
+        
+    }
+    .menubarbtn{
+        top: -2px !important;  
+    }
+    .bottommenu>button>img{
+        width: 70%;
+        height: 70%;
+        padding: 15%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
         .userlogin{
             position: absolute;
-            right: 0;
+            right: 9px;
         }
+            .username{
+                padding-right: 10px;   
+            }
             .login{
                 position: relative;
-                top: 0;
-                width: 32px;
-                height: 32px;
+                top: -1px;
+                width: 34px;
+                height: 34px;
                 color: rgba(0, 0, 0, 0);
                 margin: 0;
                 padding: 0;
@@ -526,7 +609,7 @@
 /*Tablet*/
 /*
 @media (min-width: 768px) and (max-width: 1024px){
-		h1{color: #f00;}
+		h1{color: #F28972;}
 	.gamebtn{
 		display: none;
 	}

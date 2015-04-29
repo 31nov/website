@@ -17,18 +17,7 @@
                       <img src="gamebtn.png">
                       <span class="gamebtnToggle">추천메뉴 열기</span>
 				  </button>
-                    <ul class="gamelist">
-						<li>Recommended <br><b>Game</b></br></li>
-							<ul id="gamelistul">
-                                <li>
-                                    <a href="game0">
-                                        <img class="gameImg" src="#">
-                                        <em class="gameTitle"></em>
-                                        <span class="comment"></span>
-                                    </a>
-                                </li>
-							</ul>
-                    </ul>
+                    
  				  <button class="gnbbtn" type="button">
 				  	<img src="gnbbtn2.png">
                       <span class="gnbbtnToggle">메뉴 열기</span> 
@@ -79,46 +68,74 @@
 					</button>  
 				</form>
 			</div>
+            <ul class="gamelist">
+                <li>Recommended <br><b>Game</b></br></li>
+                    <ul id="gamelistul">
+                        <li>
+                            <a href="game0">
+                                <img class="gameImg" src="#">
+                                <em class="gameTitle"></em>
+                                <span class="comment"></span>
+                            </a>
+                        </li>
+                    </ul>
+            </ul>
 		</header>
 		<main id="main">
             <ul>
                 <li><!--게시판 리스트-->
-                    <div class="writeUserInfor">
-                        <a><!--inline block-->
-                            <img class="userPic"><!--작성자 사진-->
-                        </a>
+                    <div class="scatchTape">
+                        <div class="triangle1"></div>
+                        <div class="triangle2"></div>
+                        <div class="triangle3"></div>
+                        <div class="triangle4"></div>
+                        <div class="triangle5"></div>
+                        <div class="triangle6"></div>
                     </div>
-                    <span>
-                        <p class="userName"></p><br><!--작성자 명-->
-                        <p class="writeDate"></p><!--작성 일자, 시간-->
-                    </span>
-                    <div class="connectUser"><!--inline block-->
-                        friends..<br>
-                        <ul>
-                            <li>
-                                <a><img class="connectPic" src="user6.png"></a><!--친구여부 이미지-->
-                            </li>
-                            <li>
-                                <a><img class="connectPic" src="user8.png"></a><!--친구여부 이미지-->
-                            </li>
-                            <li>
-                                <a><img class="connectPic" src="user4.png"></a><!--친구여부 이미지-->
-                            </li>
-                        </ul>
-                        <span></span><!--친구 more 개수 표시-->
-                        <span></span><!--친구 more ... 표시-->
+                    <div>
+                        <div class="circle1 a e"></div>
+                        <div class="circle1 b e"></div>
+                        <div class="circle1 c e"></div>
+                        <div class="circle1 a d"></div>
+                        <div class="circle1 b d"></div>
+                        <div class="circle1 c d"></div>
                     </div>
+                    <a class="writeUserInfor">
+                        <img class="userPic"><!--작성자 사진-->
+                        <span>
+                            <p class="userName"></p><br><!--작성자 명-->
+                        </span>
+                        <div class="circle"></div>
+                    </a>
                     <div class="writeDiv">
-                        <span class="writeTitle"></span><!--게시글 제목-->
+                        <span class="writeTitle"></span><br><!--게시글 제목-->
+                        <p class="writeDate"></p><!--작성 일자, 시간-->
                     </div>
-                    <div class="countView"><!--block-->
-                        <div>
-                            <span><img src="commentIcon.png"><!--댓글 아이콘--></span>
-                            <span class="commentCount"></span><!--댓글 개수-->
+                    <div class="overView hiddenView">
+                        <!--친구 확인 여부-->
+                        <div class="connectUser">
+                            friends..<br>
+                            <ul>
+                                <li>
+                                    <a><img class="connectPic" src="user6.png"></a>
+                                </li>
+                                <li>
+                                    <a><img class="connectPic" src="user8.png"></a>
+                                </li>
+                                <li>
+                                    <a><img class="connectPic" src="user4.png"></a>
+                                </li>
+                            </ul>
                         </div>
-                        <div>
-                            <span><img src="smileIcon.png"><!--smile 아이콘--></span>
-                            <span class="smileCount"></span><!--smile 개수-->
+                        <div class="countView"><!--block-->
+                            <div>
+                                <span><img src="commentIcon.png"><!--댓글 아이콘--></span>
+                                <span class="commentCount"></span><!--댓글 개수-->
+                            </div>
+                            <div>
+                                <span><img src="smileIcon.png"><!--smile 아이콘--></span>
+                                <span class="smileCount"></span><!--smile 개수-->
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -169,15 +186,15 @@
 				최상단으로 이동하기
 			</button>
 -->
-			<button class="menubarbtn" type="button">
-				<img src="reflesh.png">
+			<button type="button">
+				<img src="refresh.png">
 				리플레쉬
 			</button>
-			<button class="menubarbtn" type="button">
+			<button type="button">
 				<img src="setting.png">
 				셋업 창 열기
 			</button>
-            <button class="menubarbtn" type="button">
+            <button type="button">
 				<img src="starbtn.png">
 				즐겨찾기 버튼
 			</button>
