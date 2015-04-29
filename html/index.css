@@ -531,7 +531,7 @@
         padding: 4px;
 		background: #F28972;
 		bottom: 0;
-        z-index: 3;
+        z-index: 4;
 	}
     .bottommenu >button{
         position: relative;
