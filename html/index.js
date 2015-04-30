@@ -232,7 +232,6 @@ jQuery(function($){
     $(window).on('scroll', function(event){
         var $this = $(this);
         var scrollTop = $this.scrollTop();
-        console.log(scrollTop);
         //6-2. 변수: scroll의 이전위치, 현재위치 체크
         //(6-2)의 class 추가/삭제를 이용해 .is() 체크
         if(scrollTop > prevScrollTop){ //스크롤을 내릴 때 & 내리고 멈춘 상태
@@ -262,32 +261,32 @@ jQuery(function($){
 //                $list.css({heigth : 90});
 //        //    $('.overView').addClass('hiddenView');
 //////////////////////////////////////////////////////
-        
-        //높이를 모두 초기화.
-        $(lists).css({height: 100});
-
-        //현재 스크롤 탑
-        scrollTop = $win.scrollTop();
-        //console.info('scrollTop:', scrollTop);
-
-        var from, to;
-
-        for(i = 0; i < lists.length; i++) {
-            var $list = $(lists[i]);
-            //시작위치 = div탑 -  윈도우 스크롤탑
-            from = $(lists[i]).offset().top - scrollTop;
-            //종료위치 = 시작위치 + div 높이
-            to = from + lists[i].offsetHeight;
-            //console.info('from - to:', from, '~', to, divs[i]);
-
-            if ( from <= flagY && flagY < to ) {
-                $list.css({height: 330});
-                $list.find('.overView').removeClass('hiddenView');
-            } else {
-                $list.css({height: 100});
-                $list.find('.overView').addClass('hiddenView');
-            }
-        }
+//        
+//        //높이를 모두 초기화.
+//        $(lists).css({height: 100});
+//
+//        //현재 스크롤 탑
+//        scrollTop = $win.scrollTop();
+//        //console.info('scrollTop:', scrollTop);
+//
+//        var from, to;
+//
+//        for(i = 0; i < lists.length; i++) {
+//            var $list = $(lists[i]);
+//            //시작위치 = div탑 -  윈도우 스크롤탑
+//            from = $(lists[i]).offset().top - scrollTop;
+//            //종료위치 = 시작위치 + div 높이
+//            to = from + lists[i].offsetHeight;
+//            //console.info('from - to:', from, '~', to, divs[i]);
+//
+//            if ( from <= flagY && flagY < to ) {
+//                $list.css({height: 330});
+//                $list.find('.overView').removeClass('hiddenView');
+//            } else {
+//                $list.css({height: 100});
+//                $list.find('.overView').addClass('hiddenView');
+//            }
+//        }
     
     });
     $win.trigger('scroll');
