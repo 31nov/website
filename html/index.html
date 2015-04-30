@@ -63,12 +63,31 @@
                         </span>
                         <div class="circle"></div>
                     </a>
-                    <div class="writeDiv">
-                        <span class="writeTitle"></span><br><!--게시글 제목-->
-                        <p class="writeDate"></p><!--작성 일자, 시간-->
+                    <p class="writeDate"></p><br><!--작성 일자, 시간-->
+                    <div class="writeTitleDiv">
+                        <span class="writeTitle"></span><!--게시글 제목-->
                     </div>
                     <div class="overView hiddenView">
+                        <article>
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                        </article>
                         <!--친구 확인 여부-->
+                        <div class="countView"><!--block-->
+                            <div>
+                                <span><img src="commentIcon.png"><!--댓글 아이콘--></span>
+                                <span class="commentCount"></span><!--댓글 개수-->
+                            </div>
+                            <div>
+                                <span><img src="smileIcon.png"><!--smile 아이콘--></span>
+                                <span class="smileCount"></span><!--smile 개수-->
+                            </div>
+                        </div>
                         <div class="connectUser">
                             friends..<br>
                             <ul>
@@ -83,35 +102,18 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="countView"><!--block-->
-                            <div>
-                                <span><img src="commentIcon.png"><!--댓글 아이콘--></span>
-                                <span class="commentCount"></span><!--댓글 개수-->
-                            </div>
-                            <div>
-                                <span><img src="smileIcon.png"><!--smile 아이콘--></span>
-                                <span class="smileCount"></span><!--smile 개수-->
-                            </div>
-                        </div>
                     </div>
                 </li>
             </ul>
         </main>
-        <div class="lnbbtndiv">
-            <button class="lnbbtn" type="button">메뉴 열기
-                <img src="lnbbtn2.png">
-            </button>
-        </div>
-		<nav class="gnb">
-
-                    
- 				  <button class="gnbbtn" type="button">
-				  	<img src="gnbbtn2.png">
-                      <span class="gnbbtnToggle">메뉴 열기</span> 
+		<nav class="lnb">
+ 				  <button class="lnbbtn" type="button">
+				  	<img src="lnbbtn2.png">
+                      <span class="lnbbtnToggle">메뉴 열기</span> 
 				  </button>
 
 					<h2>전체 메뉴</h2>
-					<ul class="gnbMenu">
+					<ul class="lnbMenu">
 						<li>
                             <a href="news">뉴스</a>
                             <button type="button" name="+" value="addTagname">+</button>
@@ -155,6 +157,7 @@
 				<li><a href="#">참고 링크3</a></li>
 			</ul>
 		</aside>
+        
 		<div class="bottommenu v">
 <!--
 			<button class="gototop" type="button">

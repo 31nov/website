@@ -10,14 +10,14 @@ jQuery(function($){
     var $tpl = $gamelistul.find('>li').remove();
     var data = {items : []};
     
-    //2-1. gamebtn/gnbbtn 변수
+    //2-1. gamebtn/lnbbtn 변수
 	var	$gamebtn = $(".gamebtn");
 	var	$gamelist = $(".gamelist");
 	var	$gamebtnToggle = $(".gamebtnToggle");
 	var	$main = $("#main");
 	var	$lnbbtn = $(".lnbbtndiv");
-	var	$gnbbtn = $(".gnbbtn");
-	var	$gnbMenu = $(".gnbMenu");
+	var	$lnbbtn = $(".lnbbtn");
+	var	$lnbMenu = $(".lnbMenu");
 	var	$footer = $("footer");
     var toggleOn = false;
     
@@ -75,8 +75,8 @@ jQuery(function($){
                 }else{
                     target = 268;   
                 }
-                $gnbbtn.animate({left: target});
-                $gnbMenu.animate({left: target-150});
+                $lnbbtn.animate({left: target});
+                $lnbMenu.animate({left: target-150});
                 $footer.animate({left: '90px'});
                 
         }else{
@@ -89,42 +89,42 @@ jQuery(function($){
                 }else{
                     target2 = 150;   
                 }
-                $gnbbtn.animate({left:target2});
-                $gnbMenu.animate({left: target2-150});
+                $lnbbtn.animate({left:target2});
+                $lnbMenu.animate({left: target2-150});
                 $footer.animate({left: '32px'});         
         }
     });	
 
     
-    //2-3. gnbbtn 토글 버튼
-    var $gnbbtnToggle = $('.gnbbtnToggle');
-    $('.gnbbtn').on('click',function(event){
+    //2-3. lnbbtn 토글 버튼
+    var $lnbbtnToggle = $('.lnbbtnToggle');
+    $('.lnbbtn').on('click',function(event){
         if(toggleOn == false){
             $(window).on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll", function(e) {
                 e.preventDefault();
                 return;
             });//스크롤 막기
             
-            $gnbbtnToggle.text('메뉴 닫기');
+            $lnbbtnToggle.text('메뉴 닫기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
                 $(this).animate({left: 150},300);
-                $gnbMenu.css({display: 'block'});
-                $gnbMenu.animate({left: 0},300);
+                $lnbMenu.css({display: 'block'});
+                $lnbMenu.animate({left: 0},300);
             }else{
                 $(this).animate({left: 268},300);
-                $gnbMenu.css({display: 'block'});
-                $gnbMenu.animate({left: 118},300);
+                $lnbMenu.css({display: 'block'});
+                $lnbMenu.animate({left: 118},300);
             }
             toggleOn = true;
         }else{
             
-            $gnbbtnToggle.text('메뉴 열기');
+            $lnbbtnToggle.text('메뉴 열기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
                 $(this).animate({left: 0},300);
-                $gnbMenu.animate({left: -150},300);
+                $lnbMenu.animate({left: -150},300);
             }else{
                 $(this).animate({left: 118},300);
-                $gnbMenu.animate({left: -150},300);
+                $lnbMenu.animate({left: -150},300);
             }
             $(window).off(".disableScroll");//스크롤 막기
             toggleOn =false;
@@ -193,9 +193,9 @@ jQuery(function($){
     
     
     
-//    //4-1. gnbMenu ul>li>a 색상 넣기
-//    $('.gnbMenu > ul >li :even').css({background:'#fff'});
-//    $('.gnbMenu > ul >li :odd').css({background:'#fff'});
+//    //4-1. lnbMenu ul>li>a 색상 넣기
+//    $('.lnbMenu > ul >li :even').css({background:'#fff'});
+//    $('.lnbMenu > ul >li :odd').css({background:'#fff'});
 
     //5-1. mainList 변수
     var $mainList = $('#main> ul >li');
@@ -207,7 +207,7 @@ jQuery(function($){
     
     //5-2. mainList height 가변 값 만들기
     function mainListHeight(x,y){
-        $mainList.css({height:x+y});
+        $mainList.css({height:x+y+10});
         $writeUserInfor.css({height: x-8});
         $writeUserInforA.css({height: x});
         $writeUserInforA.css({width: x});
@@ -222,23 +222,29 @@ jQuery(function($){
     var prevScrollTop = 0;
     var $header_single = $('.header_single');
     var $gamelist = $('.gamelist');
-    var $gnbbtn = $('.gnbbtn');
+    var $lnbbtn = $('.lnbbtn');
     var $bottommenu = $('.bottommenu');
+    var $win = $(window);
+    var $doc = $(document);
+    var lists = $doc.find('#main>ul>li');
+    var flagY = 130;
     
     $(window).on('scroll', function(event){
         var $this = $(this);
         var scrollTop = $this.scrollTop();
+        console.log(scrollTop);
         //6-2. 변수: scroll의 이전위치, 현재위치 체크
+        //(6-2)의 class 추가/삭제를 이용해 .is() 체크
         if(scrollTop > prevScrollTop){ //스크롤을 내릴 때 & 내리고 멈춘 상태
             if($gamelist.css("display") == 'block'){
     //            $header_single.animate({top:-42});
                 $header_single.css({visibility: 'visible'}).removeClass("h").addClass("v"); 
-                $gnbbtn.css({visibility: 'visible'});                 
+                $lnbbtn.css({visibility: 'visible'});                 
             }else{
     //            $header_single.animate({top:-42});
                 $header_single.css({visibility: 'hidden'}).removeClass("v").addClass("h"); 
                 $bottommenu.css({visibility: 'visible'}).addClass("v").removeClass("h"); 
-                $gnbbtn.css({visibility: 'visible'}); 
+                $lnbbtn.css({visibility: 'visible'}); 
             }
         }else{ //스크롤을 올릴 때 & 올리고 멈춘 상태
 //            $header_single.animate({top:0});
@@ -246,41 +252,77 @@ jQuery(function($){
             $bottommenu.css({visibility: 'hidden'}).removeClass("v").addClass("h"); 
         }
         prevScrollTop = scrollTop;
-        //6-5. 스크롤이 올라가고 있을 때
+////////////////////////////////////////////////////////
+//        var $list = $('#main>ul>li');
+//        var $listTop = $list.offset().top;
+//            if($listTop > 42 && $listTop < 137){
+//                $list.css({height: 150});
+//        //        $('.overView').removeClass('hiddenView');   
+//            }
+//                $list.css({heigth : 90});
+//        //    $('.overView').addClass('hiddenView');
+//////////////////////////////////////////////////////
+        
+        //높이를 모두 초기화.
+        $(lists).css({height: 100});
+
+        //현재 스크롤 탑
+        scrollTop = $win.scrollTop();
+        //console.info('scrollTop:', scrollTop);
+
+        var from, to;
+
+        for(i = 0; i < lists.length; i++) {
+            var $list = $(lists[i]);
+            //시작위치 = div탑 -  윈도우 스크롤탑
+            from = $(lists[i]).offset().top - scrollTop;
+            //종료위치 = 시작위치 + div 높이
+            to = from + lists[i].offsetHeight;
+            //console.info('from - to:', from, '~', to, divs[i]);
+
+            if ( from <= flagY && flagY < to ) {
+                $list.css({height: 330});
+                $list.find('.overView').removeClass('hiddenView');
+            } else {
+                $list.css({height: 100});
+                $list.find('.overView').addClass('hiddenView');
+            }
+        }
+    
     });
+    $win.trigger('scroll');
     
     
-    //2-5. gnbMenu 높이와 너비 맞추기
-    // (6-2)의 class 추가/삭제를 이용해 .is() 체크
-    $gnbbtn.on('click',function(event){
-        //2-4.gnblist moving
+    //2-5. lnbMenu 높이와 너비 맞추기
+    $lnbbtn.on('click',function(event){
+        //2-4.lnblist moving
         var head_singleHeight = $('.header_single').height();
         var bottommenuHeight = $('.bottommenu').height();
-        var gnbHeight = $(window).height()-head_singleHeight;
-        var $gnbLi = $('.gnbMenu li');
-        var $gnbLiA = $('.gnbMenu li >a');
+        var lnbHeight = $(window).height()-head_singleHeight;
+        var $lnbLi = $('.lnbMenu li');
+        var $lnbLiA = $('.lnbMenu li >a');
         if($header_single.is('.v')){
             //위아래 다 보일 때
             if($bottommenu.is('.v')){
-                $gnbMenu.css({top: head_singleHeight});
-                $gnbMenu.css('height', gnbHeight-bottommenuHeight+'px');
+                $lnbMenu.css({top: head_singleHeight});
+                $lnbMenu.css('height', lnbHeight-bottommenuHeight+'px');
             }
             //위만 보일 때
             else if($bottommenu.is('.h')){
-                $gnbMenu.css({top: head_singleHeight});
-                $gnbMenu.css('height',gnbHeight+'px');
+                $lnbMenu.css({top: head_singleHeight});
+                $lnbMenu.css('height',lnbHeight+'px');
             }
         }else if($header_single.is('.h')){
-            $gnbMenu.css({visibility: 'visible'});
+            $lnbMenu.css({visibility: 'visible'});
             //아래만 보일 때
             if($bottommenu.is('.v')){
-                $gnbMenu.css({top: 0});
-                $gnbMenu.css('height', gnbHeight+head_singleHeight-bottommenuHeight+'px');
+                $lnbMenu.css({top: 0});
+                $lnbMenu.css('height', lnbHeight+head_singleHeight-bottommenuHeight+'px');
             }
             //모두 안보일 때
             else if($bottommenu.is('.h')){
-                $gnbMenu.css({top:0});
-                $gnbMenu.css({height:gnbHeight+head_singleHeight});
+                $lnbMenu.css({top:0});
+                $lnbMenu.css({height:lnbHeight+head_singleHeight});
             }
         }
     });
@@ -300,7 +342,13 @@ jQuery(function($){
         $('#main>ul>li').css({background:z});
         $('.circle').css({background:z});
         $('.circle1').css({background:y});
+        $('.scatchTape>div:nth-child(odd)').css('border-top','3.4px solid '+w);
+        $('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid '+w);
+
         $('.bottommenu > button').css({background:w});
+        $('.overView >div').css({background:w});
+//        $('.writeTitleDiv').css({background:y});
+//        $('.overView').css({background:y});
     }
     mainColor('#f3bbcc','#233F61','#F6F1DB','#F294AD');
 //    mainColor('#F294AD','#F279A6','#C0D3C7','#7BA595');
@@ -308,17 +356,6 @@ jQuery(function($){
 //    mainColor('#DAD0D0','#233F61','#F6F1DB','#B57D9D');
     
     //8-1. 일정 위치에 있을 때 내용 보이기
-    var $list = $('#main>ul>li');
-    var $listTop = $list.offset().top;
-    $(document).on('scroll',function(event){
-        if($listTop > 42 && $listTop < 137){
-            $list.css({height: 150});
-    //        $('.overView').removeClass('hiddenView');   
-        }
-            $list.css({heigth : 90});
-    //    $('.overView').addClass('hiddenView');   
-
-    });
 });
 
 
