@@ -412,7 +412,7 @@ jQuery(function($){
     var $refresh = $('.bottommenu img[src="refresh.png"]');
     console.log($refresh);
     $refresh.on('click',function(event){
-        $('html,body').animate({'scrollTop':0},200);
+        $('html,body').animate({'scrollTop':0},0);
          
     });
 });
