@@ -2,7 +2,8 @@
 /*html reset*/
 /*All*/
     body{
-        max-width: 768px;   
+        max-width: 768px;
+        min-height: auto;
         overflow-x: hidden;
         overflow: hidden;
         background: #000;
@@ -408,9 +409,8 @@
                 border-radius: 4px;
             }
             .writeDate{
-                display: block;
                 position: relative;
-                top: 14px;
+                top: 5px;
                 
             }
             .writeTitleDiv{
@@ -418,7 +418,7 @@
                 box-sizing: border-box;
                 padding: 10px 10px 0 10px;
                 height: 32px;
-                top: 20px;
+                top: 32px;
                 background: #fff;
                 border-radius: 5px;
                 border-bottom-right-radius: 0;
@@ -433,10 +433,11 @@
             display: none;
         }
         .overView{
+            display: none;
             position: relative;
             box-sizing: border-box;
-            height: 220px;
-            top: 20px;
+            min-height: 220px;
+            top: 32px;
             background: #fff;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
@@ -447,7 +448,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 8px;
-            max-height: 220px;
+            min-height: 220px;
         }
         .countView{
             box-sizing: border-box;
@@ -597,6 +598,26 @@
         margin: 2px;
         background-color: blue;
     }
+/*List Open or Close*/
+.listOn{
+    
+}
+.listOff{
+    display: none !important;   
+}
+.clip{
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: -7px;
+    left: 76px;
+}
+    .clip>img{
+        width: 100%;
+        height: 100%;
+    }
+
 /*
 #test{
     position: fixed;

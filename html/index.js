@@ -23,7 +23,7 @@ jQuery(function($){
     
     //3-1. main 변수(변경할 것)
     var $mainUl = $('#main >ul');
-    var $mainLi = $('#main > ul >li').remove();
+    var $mainLiRemove = $('#main > ul >li').remove();
     var mainData = {
         users : [],
 //            userId: '',
@@ -150,7 +150,7 @@ jQuery(function($){
     }
     //3-3. 게시글 나열하기
     for(var i = 0; i < mainData.writes.length; i++){
-        $mainLi.clone()
+        $mainLiRemove.clone()
             .find('.userPic').attr('src', mainData.users[i].userPic).end()
             .find('.scatchTape').after('<sup>No.'+mainData.writes[i].writeId+'</sup>').end()
             .find('.userName').text(mainData.users[i].userName).end()
@@ -197,17 +197,17 @@ jQuery(function($){
 //    $('.lnbMenu > ul >li :even').css({background:'#fff'});
 //    $('.lnbMenu > ul >li :odd').css({background:'#fff'});
 
-    //5-1. mainList 변수
-    var $mainList = $('#main> ul >li');
+    //5-1. mainLiRemovest 변수
+    var $mainLiRemovest = $('#main> ul >li');
     var $writeUserInfor = $('.writeUserInfor');
     var $writeUserInforA = $('.writeUserInfor >a');
     var $userPic = $('.userPic');
     var $connectUser = $('.connectUser');
     var $countView = $('.countView');
     
-    //5-2. mainList height 가변 값 만들기
-    function mainListHeight(x,y){
-        $mainList.css({height:x+y+10});
+    //5-2. mainLiRemovest height 가변 값 만들기
+    function mainLiRemovestHeight(x,y){
+        $mainLiRemovest.css({height:x+y+10});
         $writeUserInfor.css({height: x-8});
         $writeUserInforA.css({height: x});
         $writeUserInforA.css({width: x});
@@ -216,7 +216,7 @@ jQuery(function($){
         $connectUser.css({height: x});
         $countView.css({top:x+y});        
     };
-    mainListHeight(60,30);
+    mainLiRemovestHeight(60,30);
 
     //6-1. scroll조작 시 head_single, bottommenu 보이고,사라지고...
     var prevScrollTop = 0;
@@ -261,7 +261,8 @@ jQuery(function($){
 //                $list.css({heigth : 90});
 //        //    $('.overView').addClass('hiddenView');
 //////////////////////////////////////////////////////
-//        
+//8-1. 일정 위치에 있을 때 내용 보이기
+// 스크롤 내릴 때 특정 지점의 게시글이 펼쳐지도록 하는 코딩       
 //        //높이를 모두 초기화.
 //        $(lists).css({height: 100});
 //
@@ -349,12 +350,49 @@ jQuery(function($){
 //        $('.writeTitleDiv').css({background:y});
 //        $('.overView').css({background:y});
     }
-    mainColor('#f3bbcc','#233F61','#F6F1DB','#F294AD');
+//    mainColor('#f3bbcc','#233F61','#F6F1DB','#F294AD');
+    mainColor('#f3bbcc','#6B78BF','#F6F1DB','#F294AD');
 //    mainColor('#F294AD','#F279A6','#C0D3C7','#7BA595');
 //    mainColor('#F2949C','#F2949C','#C0D3C7','#7BA595');
 //    mainColor('#DAD0D0','#233F61','#F6F1DB','#B57D9D');
     
-    //8-1. 일정 위치에 있을 때 내용 보이기
+    //9-1. 리스트 선택 변수
+    var $mainList = $('#main>ul>li');
+    var preTop = 0;
+    //9-2. 리스트 선택
+    $mainList.on('click', function(event){
+        var $this = $(this);
+        var listHeight = $this.offset().top;
+        var $mainListOther = $this.siblings();
+        
+        $this.css({background: '#6B78BF'})
+            .find('.scatchTape>div:nth-child(odd)').css('border-top','3.4px solid #f2f2f2').end()
+            .find('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid #f2f2f2').end()
+            .find('.writeUserInfor').css({background: '#f2f2f2'}).end()
+            .find('.circle').css({background: '#6B78BF'}).end()
+            .siblings().css({background: '#f294ad'})
+                .find('.scatchTape>div:nth-child(odd)').css('border-top','3.4px solid #f3bbcc').end()
+                .find('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid #f3bbcc').end()
+                .find('.writeUserInfor').css({background: '#f3bbcc'}).end()
+                .find('.circle').css({background: '#f294ad'});
+            
+        if($this.is('.listOn')){//열려 있을 때
+            $this.removeClass('listOn')
+                .find('.overView').slideUp(200);
+            $mainListOther.removeClass('listOff');
+            $this.animate({height : 100})
+                .find('.clip').css({display:'block'});
+            $('html,body').animate({'scrollTop':preTop},200);
+        }else{//닫혀 있을 때
+            preTop = $win.scrollTop();
+            
+            $this.addClass('listOn').find('.overView').slideDown(200);
+            var articleHeight = parseInt($('.overView').css('height').slice(0,-2));
+            console.log(articleHeight);
+            $this.animate({height : articleHeight + 170},200);
+            $('html,body').animate({'scrollTop':listHeight},200);
+        }
+    });
 });
 
 
