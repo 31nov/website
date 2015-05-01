@@ -63,6 +63,9 @@ jQuery(function($){
     
     //2-2. gamebtn 토글 버튼	
 	$gamebtn.on('click',function(){
+        if($main.is(':animated') || $lnbbtn.is(':animated') || $lnbbtn.is(':animated') || $lnbMenu.is(':animated')  || $footer.is(':animated') ){
+           return;
+        }
 //        $gamelist.css({top: $(window).scrollTop()});
 		$gamelist.toggle("slide");
         if($gamebtnToggle.text() == '추천메뉴 열기'){
@@ -99,6 +102,10 @@ jQuery(function($){
     //2-3. lnbbtn 토글 버튼
     var $lnbbtnToggle = $('.lnbbtnToggle');
     $('.lnbbtn').on('click',function(event){
+        var $this = $(this);
+        if($this.is(':animated') || $lnbMenu.is(':animated')){
+           return;
+        }
         if(toggleOn == false){
             $(window).on("mousewheel.disableScroll DOMMouseScroll.disableScroll touchmove.disableScroll", function(e) {
                 e.preventDefault();
@@ -107,11 +114,11 @@ jQuery(function($){
             
             $lnbbtnToggle.text('메뉴 닫기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
-                $(this).animate({left: 150},300);
+                $this.animate({left: 150},300);
                 $lnbMenu.css({display: 'block'});
                 $lnbMenu.animate({left: 0},300);
             }else{
-                $(this).animate({left: 268},300);
+                $this.animate({left: 268},300);
                 $lnbMenu.css({display: 'block'});
                 $lnbMenu.animate({left: 118},300);
             }
@@ -120,10 +127,10 @@ jQuery(function($){
             
             $lnbbtnToggle.text('메뉴 열기');
             if($gamebtnToggle.text() === '추천메뉴 열기'){
-                $(this).animate({left: 0},300);
+                $this.animate({left: 0},300);
                 $lnbMenu.animate({left: -150},300);
             }else{
-                $(this).animate({left: 118},300);
+                $this.animate({left: 118},300);
                 $lnbMenu.animate({left: -150},300);
             }
             $(window).off(".disableScroll");//스크롤 막기
@@ -327,7 +334,14 @@ jQuery(function($){
         }
     });
     //7-1. 색상 넣기
-    function mainColor(w,x,y,z){
+        
+    var backColor = ['#f3bbcc','#6B78BF','#F6F1DB','#F294AD', '#73A9D9', '#f2f2f2'];
+//    var backColor = ['#f3bbcc','#233F61','#F6F1DB','#F294AD'];
+//    var backColor = ['#F294AD','#F279A6','#C0D3C7','#7BA595'];
+//    var backColor = ['#F2949C','#F2949C','#C0D3C7','#7BA595'];
+//    var backColor = ['#DAD0D0','#233F61','#F6F1DB','#B57D9D'];
+    
+    function mainColor(w,x,y,z,a){
         //w: user 배경
         //x: 테두리
         //y: 배경
@@ -346,15 +360,11 @@ jQuery(function($){
         $('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid '+w);
 
         $('.bottommenu > button').css({background:w});
-        $('.overView >div').css({background:w});
+        $('.overView >div').css({background:a});
 //        $('.writeTitleDiv').css({background:y});
 //        $('.overView').css({background:y});
     }
-//    mainColor('#f3bbcc','#233F61','#F6F1DB','#F294AD');
-    mainColor('#f3bbcc','#6B78BF','#F6F1DB','#F294AD');
-//    mainColor('#F294AD','#F279A6','#C0D3C7','#7BA595');
-//    mainColor('#F2949C','#F2949C','#C0D3C7','#7BA595');
-//    mainColor('#DAD0D0','#233F61','#F6F1DB','#B57D9D');
+    mainColor(backColor[0],backColor[1],backColor[2],backColor[3], backColor[4]);
     
     //9-1. 리스트 선택 변수
     var $mainList = $('#main>ul>li');
@@ -364,18 +374,21 @@ jQuery(function($){
         var $this = $(this);
         var listHeight = $this.offset().top;
         var $mainListOther = $this.siblings();
-        
-        $this.css({background: '#6B78BF'})
-            .find('.scatchTape>div:nth-child(odd)').css('border-top','3.4px solid #f2f2f2').end()
-            .find('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid #f2f2f2').end()
-            .find('.writeUserInfor').css({background: '#f2f2f2'}).end()
-            .find('.circle').css({background: '#6B78BF'}).end()
-            .siblings().css({background: '#f294ad'})
-                .find('.scatchTape>div:nth-child(odd)').css('border-top','3.4px solid #f3bbcc').end()
-                .find('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid #f3bbcc').end()
-                .find('.writeUserInfor').css({background: '#f3bbcc'}).end()
-                .find('.circle').css({background: '#f294ad'});
+        if($this.is(':animated')){
+           return;
+        }
+        $this.css({background: backColor[1]})
+            .find('.scatchTape>div:nth-child(odd)').css('border-top','3.4px solid '+backColor[5]).end()
+            .find('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid '+backColor[5]).end()
+            .find('.writeUserInfor').css({background: backColor[5]}).end()
+            .find('.circle').css({background: backColor[1]}).end()
+            .siblings().css({background: backColor[3]})
+                .find('.scatchTape>div:nth-child(odd)').css('border-top','3.4px solid '+backColor[0]).end()
+                .find('.scatchTape>div:nth-child(even)').css('border-bottom','3.4px solid '+backColor[0]).end()
+                .find('.writeUserInfor').css({background: backColor[0]}).end()
+                .find('.circle').css({background: backColor[3]});
             
+        var articleHeight = parseInt($this.find('.overView').css('height').slice(0,-2));
         if($this.is('.listOn')){//열려 있을 때
             $this.removeClass('listOn')
                 .find('.overView').slideUp(200);
@@ -387,9 +400,8 @@ jQuery(function($){
             preTop = $win.scrollTop();
             
             $this.addClass('listOn').find('.overView').slideDown(200);
-            var articleHeight = parseInt($('.overView').css('height').slice(0,-2));
             console.log(articleHeight);
-            $this.animate({height : articleHeight + 170},200);
+            $this.animate({height : articleHeight + 110 },200);
             $('html,body').animate({'scrollTop':listHeight},200);
         }
     });
