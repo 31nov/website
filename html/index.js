@@ -5,6 +5,11 @@ month = date.getMonth();
 day = date.getDate();
 jQuery(function($){
     
+    //0. 기본 변수
+    var $this = $(this);
+    var $win = $(window);
+    var $doc = $(document);
+    
     //1-1. gameList 변수
     var $gamelistul = $('#gamelistul');
     var $tpl = $gamelistul.find('>li').remove();
@@ -231,12 +236,11 @@ jQuery(function($){
     var $gamelist = $('.gamelist');
     var $lnbbtn = $('.lnbbtn');
     var $bottommenu = $('.bottommenu');
-    var $win = $(window);
-    var $doc = $(document);
     var lists = $doc.find('#main>ul>li');
     var flagY = 130;
     
     $(window).on('scroll', function(event){
+        console.log($win.scrollTop());
         var $this = $(this);
         var scrollTop = $this.scrollTop();
         //6-2. 변수: scroll의 이전위치, 현재위치 체크
@@ -335,7 +339,7 @@ jQuery(function($){
     });
     //7-1. 색상 넣기
         
-    var backColor = ['#f3bbcc','#6B78BF','#F6F1DB','#F294AD', '#73A9D9', '#f2f2f2'];
+    var backColor = ['#f3bbcc','#6B78BF','#F6F1DB','#F294AD', '#3366cc', '#f2f2f2'];
 //    var backColor = ['#f3bbcc','#233F61','#F6F1DB','#F294AD'];
 //    var backColor = ['#F294AD','#F279A6','#C0D3C7','#7BA595'];
 //    var backColor = ['#F2949C','#F2949C','#C0D3C7','#7BA595'];
@@ -400,10 +404,16 @@ jQuery(function($){
             preTop = $win.scrollTop();
             
             $this.addClass('listOn').find('.overView').slideDown(200);
-            console.log(articleHeight);
+//            console.log(articleHeight);
             $this.animate({height : articleHeight + 110 },200);
             $('html,body').animate({'scrollTop':listHeight},200);
         }
+    });
+    var $refresh = $('.bottommenu img[src="refresh.png"]');
+    console.log($refresh);
+    $refresh.on('click',function(event){
+        $('html,body').animate({'scrollTop':0},200);
+         
     });
 });
 

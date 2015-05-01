@@ -453,8 +453,8 @@
         .countView{
             box-sizing: border-box;
             top: 0;/*js 5.에서 설정*/
-            margin: 1%;
-            width: 58%;
+            margin: 1% 0;
+            width: 60%;
             height: 60px;
             font-size: 12px;
             color: #666;
@@ -481,12 +481,12 @@
                 }
                 .countView img{
                     width: auto;
-                    height: 20px;
+                    height: 32px;
                     vertical-align: center;
                 }
        .connectUser{
 /*            position: absolute;*/
-            margin: 1%;
+            margin: 1% 0;
             top: 10px;
             right: 10px;
             width: auto;
@@ -496,10 +496,12 @@
             float: right;
             background: #653323;
             border-radius: 5px;
-
         }
             .connectUser ul{
-                padding: 0;   
+                padding: 0;
+                height: 40px;
+                width: 100%;
+                overflow: hidden
             }
             .connectUser li{
                 display: inline-block;
@@ -546,12 +548,11 @@
         padding: 0;
         border: 0;
         border-radius: 16px;
-        
     }
-    .menubarbtn{
+    .bottommenu >button:nth-child(4){
         top: -2px !important;  
     }
-    .bottommenu>button>img{
+    .bottommenu>button img{
         width: 70%;
         height: 70%;
         padding: 15%;
