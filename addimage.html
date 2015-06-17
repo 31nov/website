@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>Python_img 넣기1</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<!-- bootstrap -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="./addimage_css_js/addimage.css">
+	</head>
+	<body>
+       <div class='front left'></div>
+       <div class="end right"></div>
+       <div class="check check1"></div>
+       <div>
+           <span id="1">
+               <header>
+                   <h3>1) 변경할 내용</h3>
+               </header>
+               <main>
+                   <table>
+                        <tr>
+                            <th>기존 모습</th>
+                            <th>변경 할 모습</th>
+                        </tr>
+                        <tr>
+                            <td><div class="imgSize"><img src="./image/1.png"></div></td>
+                            <td><div class="imgSize"><img src="./image/2.png"></div></td>
+                        </tr>
+                    </table>
+                    <ul>
+                        <li>기존에 수업에서 들은 내용에는 text를 추가하는 내용까지 였습니다.</li>
+                        <li>그래서 이미지를 넣는 방법에 대해서 한번 정리해봤습니다.</li>
+                        <li>위 테이블의 우측과 같이 <b class="red">이미지</b>와 <b class="red">이미지의 파일명</b>이 나타나도록 변경해보도록 하겠습니다.</li>
+                    </ul>
+               </main>
+           </span>
+           <span id="2">
+               <header>
+                   <h3>2) model.py 변경하기1</h3>
+               </header>
+               <main>
+                   <table>
+                        <tr>
+                            <th>기존 모습</th>
+                            <th>추가 한 모습</th>
+                        </tr>
+                        <tr>
+                            <td><div class="imgSize"><img src="./image/3.png"></div></td>
+                            <td><div class="imgSize"><img src="./image/4.png"></div></td>
+                        </tr>
+                    </table>
+                    <ul>
+                        <li>추가한 내용을 좀 더 크게 보겠습니다.</li>
+                        <li class="liImg imgLarge"><img src="./image/5.png"></li>
+                        <li>이미지를 model에 추가할 때는 <b class="red">ImageField</b>를 사용합니다.</li>
+                    </ul>
+               </main>
+           </span>
+          <span id="3">
+               <header>
+                   <h3>3) model.py 변경하기2</h3>
+               </header>
+               <main>
+                    <ul>
+                        <li>추가한 내용을 좀 더 크게 보겠습니다.</li>
+                        <li class="liImg imgLarge"><img src="./image/5.png"></li>
+                        <li><b class="red">ImageField</b>의 괄호 안에는 <b class="red">upload_to</b>를 넣어줘야 하는데, 이것의 사용 용도는 어떤 위치에 넣을 것인가! 입니다.</li>
+                        <li>예를 들어 upload_to="board/image"라고 넣는다면</li>
+                        <li class="liImg imgSmall"><img src="./image/6.png"></li>
+                        <li>이렇게 이곳에 해당 이미지가 저장될 것입니다.</li>
+                        <li>그런데 여기서 <b class="red">%Y/%m/%d</b>로 적혀 있는 것은 년도,월,일 별로 구분해서 폴더를 만들어가며 넣으라는 뜻입니다. 그 결과 이렇게...</li>
+                        <li class="liImg imgSmall"><img src="./image/7.png"></li>
+                        <li>년도 폴더 안에, 월 폴더 안에, 일 폴더 안에 이미지 파일이 저장됩니다.</li>
+                    </ul>
+               </main>
+           </span>
+           <span id="4">
+               <header>
+                   <h3>4) model.py 변경하기3</h3>
+               </header>
+               <main>
+                    <ul>
+                        <li>추가한 내용을 좀 더 크게 보겠습니다.</li>
+                        <li class="liImg imgLarge"><img src="./image/5.png"></li>
+                        <li>확인을 위해 upload_to="board/image"로 바꾸겠습니다.</li>
+                        <br>
+                        <li class="liImg imgLarge"><img src="./image/9.png"></li>
+                        <br>
+                        <button class="comment" type="button">추가 설명</button>
+                        <div class="commentBox">
+                            <ul>
+                                <li><b class="red">null=True</b>는 왜 썼는지 아직 모르겠습니다.(차후에 알게 되면 설명 추가하겠습니다.</li>
+                                <li><b class="red">blank=True</b>는 해당 항목에 아무것도 들어가 있지 않아도, submit이 가능하게 해주는 기능입니다.</li>
+                                <li>다시 말해, <b class="red">blank=False</b>이면, 필수항목. <b class="red">blank=True</b>이면, 선택항목</li>
+                            </ul>
+                        </div>
+                    </ul>
+               </main>
+           </span>
+           <span id="5">
+               <header>
+                   <h3>5) setting.py 정리하기</h3>
+               </header>
+               <main>
+                    <ul>
+                        <li>이미지를 저장하기 위해서는 setting.py에 추가해야 할 항목이 있습니다.</li>
+                        <li><b class="red">가장 하단에</b> 아래 이미지와 같이 넣어주세요.</li>
+                        <li class="liImg imgLarge"><img src="./image/13.png"></li>
+                        <li>위 내용을 넣어줘야 이미지가 해당 경로로 저장이 됩니다.</li>
+                        
+                        <br>
+                        <button class="comment" type="button">추가 설명</button>
+                        <div class="commentBox">
+                            <ul>
+                                <li><b class="red">join(BASE_DIR, '')</b>의 ''안에 경로를 지정해주면 upload_to에서 지정한 경로 이전의 경로를 넣을 수 있습니다.</li>
+                                <li class="liImg imgLarge2"><img src="./image/14.png"></li>
+                                <li>이렇게 지정을 해주고, 기존에 model.py에 적어논 upload_to를 다시 보면</li>
+                                <li class="liImg imgLarge2"><img src="./image/9.png"></li>
+                                <li>저장되는 위치는 아래와 같이 <b class="red">board/statice_files/board/image</b>폴더가 됩니다.</li>
+                                <li class="liImg imgHeight"><img src="./image/15.png"></li>
+                                <br>
+                                <li>(추가 설명에 들어간 코드는 사용하지 않겠습니다.)</li>
+                            </ul>
+                        </div>
+                    </ul>
+               </main>
+           </span>
+           <span id="6">
+               <header>
+                   <h3>6) 서버에 반영하기</h3>
+               </header>
+               <main>
+                    <ul>
+                        <li class="liImg imgLarge"><img src="./image/8.png"></li>
+                        <li>model.py 파일이 변경됐으니, 서버를 다시 올려야겠네요.</li>
+                        <li>다들 아시다시피</li>
+                        <ul>
+                           <li>python manage.py makemigrations</li>
+                           <li>python manage.py migrate</li>
+                           <li>python manage.py runserver 0.0.0.0:8000</li>
+                        </ul>
+                        <li>이렇게 다시 서버를 올립니다.</li>
+                    </ul>
+               </main>
+           </span>
+           <span id="7">
+               <header>
+                   <h3>7) admin 확인하기</h3>
+               </header>
+               <main>
+                   <ul>
+                       <li>이번엔 admin으로 들어가서 등록할 공간이 있는지 확인해보겠습니다.</li>
+                       <li><a href="192.168.56.101:8000/admin" target="_blank">192.168.56.101:8000/admin</a>으로 들어갑니다.<br>(주소가 안먹네요..ㅠㅠ 이것도 이유를 모르니, 나중에 손볼께요..ㅠㅠ)</li>
+                       <li class="liImg imgLarge"><img src="./image/10.png"></li>
+                       <li>이렇게 맨 하단에 파일을 등록할 수 있는 공간이 있음을 알 수 있습니다.</li>
+                       <li>하나 추가해서 넣어보겠습니다.</li>
+                       <li class="liImg imgHeight"><img src="./image/11.png"><img src="./image/12.png"></li>
+                       <li>이렇게 파일이 저장되는 것을 보실 수 있습니다.</li>
+                   </ul>
+               </main>
+           </span>
+           <span id="8">
+               <header>
+                   <h3>8) article.html 문서 수정하기</h3>
+               </header>
+               <main>
+                   <ul>
+                       <li>이제 admin에 추가된 이미지가 화면에 나오도록 해야겠죠.</li>
+                       <li>그렇기 위해 <b class="red">article.html</b>문서를 수정하겠습니다.</li>
+                   </ul>
+                   <table>
+                        <tr>
+                            <th>기존 모습</th>
+                            <th>변경 할 모습</th>
+                        </tr>
+                        <tr>
+                            <td><div class="imgSize"><img src="./image/16.png"></div></td>
+                            <td><div class="imgSize"><img src="./image/17.png"></div></td>
+                        </tr>
+                    </table>
+                    <ul>
+                       <li>기존의 문서에서 <b class="red">{{article.content|linebreaks}}</b>가 적혀 있는 곳의 아래에 (div)가 닫힌 곳 바로 아래에...</li>
+                       <li class="liImg imgLarge"><img src="./image/18.png"></li>
+                       <li>추가해 줍니다. 그 내용은 아래와 같습니다.</li>
+                       <li class="liImg imgLarge"><img src="./image/19.png"></li>
+                       <li>여기서 다시 article.html을 호출하는 부분을 살펴보겠습니다.(사실 urls.py - views.py - *.html 순으로 설명해야 하는데, 설명을 꺼꾸로 하겠습니다.)</li>
+                       <li>호출하는 views.py를 확인해보겠습니다.</li>
+                       <br>
+                        <button class="comment" type="button">추가 설명</button>
+                        <div class="commentBox">
+                            <ul>
+                                <li class="liImg imgLarge2"><img src="./image/20.png"></li>
+                                <li><b class="red">{% if article.img_file %}</b>은 이미지를 넣는 것이 선택항목이기 때문에 이미지가 없는 경우 if구문의 내용은 나오지 않게 하기 위함입니다.</li>
+                                <li class="liImg imgLarge2"><img src="./image/21.png"></li>
+                                <li>이미지의 이름을 불러올때는 <b class="red">article.img_file</b>이라고 하면 되지만, 이미지를 보여주기 위해서는 뒤에 <b class="red">.red</b>를 붙여줘야 합니다.(정확한 이유는 밝혀내야 합니다...ㅡ _ㅡ;;;;;)</li>
+                            </ul>
+                        </div>
+                   </ul>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+                   <br>
+               </main>
+           </span>
+           <span id="9">
+               <header>
+                   <h3>9) views.py</h3>
+               </header>
+               <main>
+                   <ul>
+                        <li class="liImg imgLarge"><img src="./image/22.png"></li>
+                        <li>article.html을 호출하는 views.py의 함수는 <b class="red">read_article</b>함수 입니다.</li>
+                        <li>하지만 우리는 model.py에서 Article 클래스에 이미지를 추가했기 때문에 더 손댈 필요가 없습니다.</li>
+                        <li>이번에는 이 <b class="red">read_article</b>함수를 호출하는 <b class="red">urls.py</b>로 넘어가겠습니다.</li>
+                    </ul>
+               </main>
+           </span>
+           <span id="10">
+              <div class="check check11"></div>
+               <header>
+                   <h3>10) urls.py</h3>
+               </header>
+               <main>
+                   <ul>
+                        <li class="liImg imgLarge"><img src="./image/23.png"></li>
+                        <li>상속 받을 내용 2가지와 추가로 작성할 내용이 있습니다.</li>
+                        <li class="liImg imgLarge"><img src="./image/24.png"></li>
+                        <li>static과 setting을 상속받고</li>
+                        <li class="liImg imgLarge"><img src="./image/25.png"></li>
+                        <li>가장 하단에 위와 같이 써주면 됩니다.(기존에 있던 내용의 괄호 밖에...)</li>
+                    </ul>
+               </main>
+           </span>
+           <span id="11">
+               <header>
+                   <h3>1부 마치며</h3>
+               </header>
+               <main>
+                   <ul>
+                        <li>아직 admin에서 추가하는 방법까지만 익혔습니다.</li>
+                        <li>조만간 2부도 올리겠습니다. submit 하는 방법을 익힌 후에...<br></li>
+                        <li>타 사이트를 보며, 만들다 보니, 설명이 많이 부실합니다. 알게되면 알게되는 족족 업데이트 하도록 하겠습니다.</li>
+                        <li>참조 사이트: <a href="http://blog.hannal.com/category/start-with-django-webframework/">Kay on the rails</a></li>
+                    </ul>
+               </main>
+           </span>
+        </div>
+       <nav class="text-center">
+            <ul class="pagination">
+                <li>
+                    <a class='front'>
+                        <span aria-hidden="true">&larr;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                    <li class="middle">
+                        <li><a class="nav nav1">1</a></li>
+                        <li><a class="nav nav2">2</a></li>
+                        <li><a class="nav nav3">3</a></li>
+                        <li><a class="nav nav4">4</a></li>
+                        <li><a class="nav nav5">5</a></li>
+                        <li><a class="nav nav6">6</a></li>
+                        <li><a class="nav nav7">7</a></li>
+                        <li><a class="nav nav8">8</a></li>
+                        <li><a class="nav nav9">9</a></li>
+                        <li><a class="nav nav10">10</a></li>
+                        <li><a class="nav nav10">11</a></li>
+                    </li>
+                <li>
+                    <a class="end">
+                        <span aria-hidden="true">&rarr;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+	</body>
+	<script src="./addimage_css_js/addimage.js"></script>
+</html>
