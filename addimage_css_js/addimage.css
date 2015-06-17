@@ -1,0 +1,97 @@
+html{
+    width: 800px;   
+}
+.red{
+    color: red;   
+}
+.left{
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 170px;
+    height: 100%;
+    z-index: 2;
+}
+.right{
+    position: fixed;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    width: 170px;
+    height: 100%; 
+    z-index: 2;
+}
+.check{
+    position: absolute;
+    display: inline-block;
+    border: 3px solid #f00;
+}
+table{
+    margin: 10px;  
+    max-width: 850px;
+}
+tr, th, td{
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+td{
+    vertical-align: top;
+}
+.imgSize{
+    margin: 5px;   
+}
+table img{
+    width: 100%;   
+}
+.front:hover, .end:hover, .nav:hover{
+    cursor: pointer;
+}
+.liImg{
+    list-style-type: none;
+}
+.imgLarge>img{
+    width: 750px;
+}
+.imgLarge2>img{
+    width: 600px;
+}
+.imgSmall>img{
+    width: 300px;
+}
+.imgHeight>img{
+    height: 250px;   
+}
+nav{
+    position: fixed;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    
+}
+.comment{
+    border-radius: 5px;   
+}
+.commentBox{
+    display: none;
+    border: 1px solid #555;
+    background: #eee;
+}
+/*check 페이지 별 변경 css*/
+/*
+.check1{
+    top: 290px;
+    left: 430px;
+    width: 330px;
+    height: 270px;
+}
+*/
+/*
+.check2{
+    top: 220px;
+    left: 436px;
+    width: 334px;
+    height: 24px;
+}*/
