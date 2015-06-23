@@ -1,26 +1,26 @@
 html{
     width: 800px;   
 }
+body{
+    margin-bottom: 100px;   
+}
+.chapter a{
+    display: inline-block;
+    margin: 5px;
+}
+hr{
+    margin-top: 5px;   
+}
+h1{
+    color: blue;
+}
 .red{
     color: red;   
 }
-.left{
-    position: fixed;
-    display: inline-block;
-    top: 0;
-    left: 0;
-    width: 170px;
-    height: 100%;
-    z-index: 2;
-}
-.right{
-    position: fixed;
-    display: inline-block;
-    top: 0;
-    right: 0;
-    width: 170px;
-    height: 100%; 
-    z-index: 2;
+.page5{
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: pointer;
 }
 .check{
     position: absolute;
