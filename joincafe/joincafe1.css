@@ -1,0 +1,142 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+.phone{
+
+}
+main>article>div{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 10px;
+    
+    width: 324px;
+    height: 486px;
+    
+    overflow: scroll;
+}
+.login{
+    float: right;
+}
+.phoneHead>img{
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+}
+.phoneHead{
+    position: fixed;
+    z-index: 2;
+    background: yellow;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+    box-sizing: border-box;
+    
+    padding: 10px;
+    height: 38px;
+    width: 324px;
+    vertical-align: middle;
+}
+.phoneHead>button{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: yellow;
+}
+/*
+.phoneHead>button>img{
+    width: 30px;
+    height: 30px;
+}
+*/
+img{
+    width: 50%;
+    height: auto;
+}
+
+/*****************************************/
+.cafeList{
+    padding: 5px;
+    overflow: scroll;
+    margin: 32px 0;
+}
+.cafeList>button{
+    width: 314px;
+    height: 20px;
+    margin: 5px 0;
+}
+.cafeList>div{
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px 0;
+}
+.imgSide{
+    display: inline-block;
+    height: 115px;
+}
+.imgSide>span>img{
+    width: auto;
+    height: 17px;
+}
+.backgroundColor{
+    background: pink;   
+}
+/*****************************************/
+.shareBox{
+    position: absolute;
+    top: 123px;
+    left: 10px;
+    
+    width: 322px;
+    height: 406px;
+    background: #000;
+    opacity: 0.5;
+}
+.shareimg{
+    position: absolute;
+    top: 123px;
+    left: 10px;
+    margin: 46px 70px;
+}
+.shareBtn{
+    background: pink;
+}
+/*****************************************/
+.cafePic>img{
+    width: 100%; 
+    border-radius: 5px;
+}
+.ownerTalk{
+    font-size: 12px;   
+}
+.talkBox{
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 5px;
+}
+/*****************************************/
+
+.phoneBottom{
+    position: fixed;
+    z-index: 2;
+    background: yellow;
+    height: 40px;
+    width: 324px;
+    top: 529px;
+    border-radius: 10px;
+}
+.phoneBottom button{
+    position: relative;
+    left: 263px;
+    top: 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100px;
+    height: 32px;
+}
+
