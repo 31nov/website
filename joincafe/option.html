@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<header>
-            <h1>Cafe 찾기</h1>
+            <h1>Option</h1>
 		</header>
 		<main>
             <article>
@@ -14,6 +14,7 @@
 		        <div class="phoneHead">
                     <button onclick="window.history.go(-1)"><img src="./image/backspace.png"></button>
                     카페 찾기
+                    
 		        </div>
 <!--------------------------------------------------------------------->
                 <form>
@@ -95,11 +96,75 @@
                         <input type="radio" name="light" value="dark">없어요
                         <br>
                 </form>
+                <div class="blackblock">
+                </div>
+                <div class="optionBox">
+                   <button onclick="window.history.go(-1)"><img class="optionClose" src="./image/close.png"> </button>
+                    
+                    <label style="font-size:14px;"><b>기본 설정하기</b></label><br><br>
+                    <label class="colorBlue title">금액
+                    </label><br>
+                        <img src="./image/cash.png">
+                        <input type="radio" name="cash" value="anything">상관없어요
+                        <input type="radio" name="cash" value="YES">별도 금액지불
+                        <input type="radio" name="cash" value="No" checked>커피만 드시면 되요
+                        <br>
+                        <img src="./image/coffee.png">
+                            <select>
+                                <option value="1000won">2,000원 미만</option>
+                                <option value="2000won">2,000원대</option>
+                                <option value="3000won">3,000원대</option>
+                                <option value="4000won">4,000원대</option>
+                                <option value="5000won">5,000원 이상</option>
+                            </select>
+                        <br>
+                        <hr>
+
+                    <label class="colorBlue title">조건
+                    </label><br>
+                        <img src="./image/wifi.png">
+                        <input type="radio" name="wifi" value="anything" checked>상관없어요
+                        <input type="radio" name="wifi" value="YES">YES
+                        <input type="radio" name="wifi" value="No">No
+                        <br>
+                        <img src="./image/conent.png">
+                        <input type="radio" name="connect" value="anything">상관없어요
+                        <input type="radio" name="connect" value="YES">모두 써요
+                        <input type="radio" name="connect" value="only" checked>1개만 있으면 되요
+                        <input type="radio" name="connect" value="No">없어도 되요                     
+                        <br>
+                        <img src="./image/toilet.png">
+                        <input type="radio" name="toilet" value="anything" >상관없어요
+                        <input type="radio" name="toilet" value="2">남/여 따로
+                        <input type="radio" name="toilet" value="1" checked>공용
+                        <input type="radio" name="toilet" value="No">건물 밖에 있어요
+                        <br>
+                        <img src="./image/light.png">
+                        <input type="radio" name="light" value="anything" >상관없어요
+                        <input type="radio" name="light" value="bright" checked>밝아요
+                        <input type="radio" name="light" value="dark">어두워요
+                        <br>
+                        <img src="./image/smoking.png">
+                        <input type="radio" name="light" value="anything" >상관없어요
+                        <input type="radio" name="light" value="bright" checked>있어요
+                        <input type="radio" name="light" value="dark">없어요
+                    <hr>
+                    <label style="font-size:14px;"><b>알림 설정하기</b></label><br><br>
+                        <label>신규 카페가 추가 됐을 때</label><br>
+                        <input type="radio" name="push" value="anything" >OFF
+                        <input type="radio" name="push" value="bright" checked>ON
+                        <br>
+                        <label>예약시간 알림</label><br>
+                        <input type="radio" name="timer" value="anything" >알림 없음
+                        <input type="radio" name="timer" value="bright" checked>1시간 전
+                        <input type="radio" name="timer" value="dark">30분 전
+                        <input type="radio" name="timer" value="dark">정시 알림
+                </div>
 <!--------------------------------------------------------------------->
                 <div class="phoneBottom">
                     <center>
-                       <a href="join5.html">
-                        <button type="button" style="width: auto;">전송하기</button>
+                       <a href="joincafe3.html">
+                        <button type="button" style="width: auto;">저장하기</button>
                        </a>
                     </center>
                    <div class="login">

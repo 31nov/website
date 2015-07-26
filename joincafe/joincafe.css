@@ -55,16 +55,29 @@ main>article>div{
     border: 0;
     background: yellow;
 }
-/*
-.phoneHead>button>img{
-    width: 30px;
-    height: 30px;
+.cafePicHalf{
+    width: 50% !important;
+    height: auto !important;
 }
-*/
-img{
-    width: 50%;
+/*******************cafe1****************/
+.loginBox{
+    margin: 5px 17px; 
+    width: 280px; 
     height: auto;
+    font-size: 20px;
 }
+.loginbtn{
+    float: right;
+    margin-right: 17px;
+    margin-top: 5px;
+    
+    width: 70px;
+    height: 40px;
+    
+    font-size: 18px;
+    background: gray;
+}
+/****************************************/
 /*******************cafe2****************/
 img{
     width: 20px;
@@ -80,7 +93,28 @@ main>article>div>form{
     font-size: 13px;
 }
 /****************************************/
-/*******************cafe4****************/
+/*******************cafe3****************/
+.listBox{
+    height: auto;
+    background: #ddd;
+}
+.listBox span{
+    margin-left: 10px;   
+}
+.newCount{
+    width: 40px !important; 
+    margin: 10px 2px -6px 5px;
+}
+.spot{
+    width: 10px;
+    height: 10px;
+    background: #888;
+    border-radius: 10px !important;
+    border: none !important;
+    margin: 10px;
+}
+/****************************************/
+/*******************cafe5****************/
 .cafeList{
     padding: 5px;
     overflow: scroll;
@@ -107,26 +141,24 @@ main>article>div>form{
 .backgroundColor{
     background: pink;   
 }
+.cafePic>img{
+    width: 100% !important; 
+    height: auto !important;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.ownerTalk{
+    font-size: 12px;   
+}
+.talkBox{
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 5px;
+}
+.cafeImpo td{
+    width: 36%;
+}
 /*****************************************/
-/*******************cafe1****************/
-.loginBox{
-    margin: 5px 17px; 
-    width: 280px; 
-    height: auto;
-    font-size: 20px;
-}
-.loginbtn{
-    float: right;
-    margin-right: 17px;
-    margin-top: 5px;
-    
-    width: 70px;
-    height: 40px;
-    
-    font-size: 18px;
-    background: gray;
-}
-/****************************************/
 .shareBox{
     position: absolute;
     top: 123px;
@@ -146,25 +178,47 @@ main>article>div>form{
 .shareBtn{
     background: pink;
 }
-/*****************************************/
-.cafePic>img{
-    width: 100%; 
-    border-radius: 5px;
-    margin: 5px 0;
+/*******************potion***************/
+.blackblock{
+    position: fixed;
+    width: 324px;
+    height: 486px;
+    
+    top: 99px;
+    left: 1px;
+    background: #000;
+    opacity: 0.8;
 }
-.ownerTalk{
-    font-size: 12px;   
-}
-.talkBox{
-    border: 1px solid #333;
-    border-radius: 5px;
+.optionBox{
+    position: fixed;
+    width: 280px;
+    height: 450px;
+    box-sizing: border-box;
+    
+    margin: 18px 22px;
     padding: 5px;
+    top: 99px;
+    left: 1px;
+    background: #fff;
+    
+    font-size: 10px;
 }
-.cafeImpo td{
-    width: 36%;
+.optionBox>button{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
 }
-/*****************************************/
-
+.optionClose{
+    width: 30px;
+    height: 30px;
+}
+/****************************************/
 .phoneBottom{
     position: fixed;
     z-index: 2;
