@@ -1,0 +1,135 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+.phone{
+
+}
+main>article>div{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 10px;
+    
+    width: 324px;
+    height: 486px;
+    
+    overflow: scroll;
+}
+.phoneHead{
+    background: yellow;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    
+    box-sizing: border-box;
+    
+    padding: 10px;
+    height: 38px;
+    width: 324px;
+    vertical-align: middle;
+}
+.phoneHead>i{
+    float: right;
+    color: blue;
+    font-weight: bold;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+}
+main>article>div>form{
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 10px;   
+}
+.title{
+    font-weight: bold;
+    color: blue;
+}
+.phoneBottom{
+    position: absolute;
+    background: yellow;
+    height: 40px;
+    width: 324px;
+    bottom: 0;
+}
+.phoneBottom button{
+    position: relative;
+    left: 112px;
+    top: 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100px;
+    height: 32px;
+}
+.hidden{
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    
+    top: 193px;
+    left: 276px;
+}
+.hidden>img{
+    width: 100%;
+    height: auto;
+}
+.blank{
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 324px;
+    height: 408px;
+    background: #000;
+    opacity: 0.5;
+    
+    left: 9px;
+    top: 296px;
+    
+    color: #fff;
+    font-size: 30px;
+    
+    padding: 104px;
+    padding-top: 178px;
+    border-radius: 0;
+}
+.server{
+    display: none;
+    box-sizing: border-box;
+    border: 1 solid #000;
+    border-radius: 50px;
+    
+    width: 100px;
+    height: 100px;
+    background: orange;
+    margin: 0 50px 75px 257px;
+    text-align: center;
+    padding-top: 15px;
+}
+.server p{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+}
+.textClick{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    
+    top: 518px;
+    left: 222px;
+    font-size: 30px;
+    font-weight: bold;
+    color: orangered;
+}
+.hand{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    
+    top: 552px;
+    left: 192px;
+}
