@@ -114,6 +114,16 @@ main>article>div>form{
     margin: 10px;
 }
 /****************************************/
+.beforeColor{
+    background: #f5f1e3;   
+}
+.newColor{
+    background: #fcd551;   
+}
+.allcheckbox{
+    position: absolute;
+    margin-top: 11px;
+}
 /*******************cafe5****************/
 .cafeList{
     padding: 5px;
@@ -131,15 +141,13 @@ main>article>div>form{
     margin: 5px 0;
 }
 .imgSide{
+    position: relative;
     display: inline-block;
     height: 115px;
 }
 .imgSide>span>img{
     width: auto;
     height: 17px;
-}
-.backgroundColor{
-    background: pink;   
 }
 .cafePic>img{
     width: 100% !important; 
@@ -157,6 +165,14 @@ main>article>div>form{
 }
 .cafeImpo td{
     width: 36%;
+}
+.new{
+    position: absolute;
+    top: -14px;
+    left: -160px;
+    
+    width: 40px !important;
+    height: 40px !important;
 }
 /*****************************************/
 .shareBox{
