@@ -4,15 +4,18 @@
 .phone{
 
 }
+body{
+    margin: 0;
+}
 main>article>div{
     position: relative;
     display: inline-block;
     border: 1px solid #000;
-    border-radius: 10px;
     
     width: 324px;
     height: 486px;
     
+    top: 38px;
     overflow: scroll;
 }
 .login{
@@ -31,12 +34,14 @@ main>article>div{
     background: yellow;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    border: 1px solid #000;
     
     box-sizing: border-box;
     
     padding: 10px;
+    left: 0;
     height: 38px;
-    width: 324px;
+    width: 326px;
     vertical-align: middle;
 }
 .phoneHead>button{
@@ -62,7 +67,6 @@ img{
 .cafeList{
     padding: 5px;
     overflow: scroll;
-    margin: 32px 0;
 }
 .cafeList>button{
     width: 314px;
@@ -110,6 +114,7 @@ img{
 .cafePic>img{
     width: 100%; 
     border-radius: 5px;
+    margin: 5px 0;
 }
 .ownerTalk{
     font-size: 12px;   
@@ -119,16 +124,26 @@ img{
     border-radius: 5px;
     padding: 5px;
 }
+.cafeImpo td{
+    width: 36%;
+}
 /*****************************************/
 
 .phoneBottom{
     position: fixed;
     z-index: 2;
     background: yellow;
+    
     height: 40px;
     width: 324px;
-    top: 529px;
+    
+    top: 585px;
+    left: 0;
+    
+    border: 1px solid #000;
     border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .phoneBottom button{
     position: relative;
@@ -138,5 +153,8 @@ img{
     border-radius: 5px;
     width: 100px;
     height: 32px;
+}
+.size{
+    height: 100px;
 }
 
