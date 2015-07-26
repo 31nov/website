@@ -1,0 +1,130 @@
+<html lang="ko"><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width">
+        <link rel="stylesheet" href="joincafe.css">
+		<title>고객 선택_Join Cafe</title>
+	</head>
+	<body>
+		<header>
+            <h1>Cafe 예약하기</h1>
+		</header>
+		<main>
+            <article>
+		    <div>
+		        <div class="phoneHead">
+                    <button onclick="window.history.go(-1)"><img src="./image/backspace.png"></button>
+                    카페 예약하기
+                </div>
+                <article class="cafeList">
+<!--=========================1=========================-->
+                    <div>
+                        <div>
+                            <table>
+                                <tbody>
+                                    <tr style="vertical-align:middle">
+                                        <td style="width:50%; padding-right:1px;">
+                                         투썸플레이스
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <hr>
+                        <span class="colorBlue">인사말</span><br>
+                        <div class="ownerTalk">
+                            저희 커피숍을 선택해주셔서 감사합니다^^
+                            정성껏 모시겠습니다.
+                        </div>
+                        <br>
+                        <span class="colorBlue">결제하기</span><br>
+                        <div class="coffeeSelect">
+                            <span class="colorBlue">커피 구매</span><br>
+                            <div class="coffeeSell1">
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox" checked>
+                                    <input class="coffeeCount" type="number" value="1">개
+                                </div>
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox">
+                                    <input class="coffeeCount" type="number">개
+                                </div>
+                            </div>
+                            <div class="coffeeSell2">
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox">
+                                    <input class="coffeeCount" type="number">개
+                                </div>
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox" checked>
+                                    <input class="coffeeCount" type="number" value="2">개
+                                </div>
+                            </div>
+                            <div class="coffeeSell3">
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox">
+                                    <input class="coffeeCount" type="number">개
+                                </div>
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox" checked>
+                                    <input class="coffeeCount" type="number" value="2">개
+                                </div>
+                            </div>
+                            <div class="coffeeSell4">
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox">
+                                    <input class="coffeeCount" type="number">개
+                                </div>
+                                <div class="coffeeSelectCheck">
+                                    <input type="checkbox">
+                                    <input class="coffeeCount" type="number">개
+                                </div>
+                            </div>
+                            <img src="./image/coffeelist.png">
+                            <hr>
+                            <span class="colorBlue">장소 예약금액</span><br>
+                            <select>
+                                <option value="1min">1시간</option>
+                                <option value="2min" selected="selected">2시간</option>
+                                <option value="3min">3시간</option>
+                            </select>
+                            <span style="float:right;">2,000원</span>
+                            <br>
+                            <hr>
+                            <span class="colorBlue">총 금액</span><br>
+                            <div style="text-align:right;">
+                                <span><b>14,000원</b></span>
+                            </div>
+                            
+                        </div>
+                    </div>
+<!--===================================================-->
+                </article>
+                <div class="phoneBottom">
+                   <center>
+                       <a href="joincafe7.html">
+                        <button type="button" style="width: auto;">결제하기</button>
+                       </a>
+                    </center>
+                   <div class="login">
+                        <span><a href="joincafe1.html">홍길동</a></span>
+                            <a href="option.html">
+                                <img src="./image/option.png" style="height:20px; width:20px">
+                            </a>
+                    </div>
+                </div>
+		    </div>
+		    </article>
+		    <div class="size"></div>
+		    <ul>
+		        <li>가맹점 앱에서 카페 주인이 올린 정보를 모두 보여준다.</li>
+		        <li>카페 사진은 최초 5개가 보이고, (+)버튼을 누르면 추가 5개를 보여준다.</li>
+		        <li>주인장 한마디는 가맹점에서 승인을 날릴때 작성한 멘트를 보여준다.(승인을 날릴 때 작성한 멘트가 없으면 안나온다.)</li>
+		        <li>약도는 지도 앱을 연동해 보여준다.</li>
+		        <li>사용 후기는 가장 하단에 모두 나열한다.</li>
+		    </ul>
+		</main>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="joincafe.js"></script>
+	
+</body></html>

@@ -175,6 +175,46 @@ main>article>div>form{
     height: 40px !important;
 }
 /*****************************************/
+/*******************cafe6****************/
+.coffeeSelect{
+    position: relative;
+    border: 1px solid #000;
+    padding: 5px;
+}
+.coffeeSelect>img{
+    width: 100% !important;
+    height: auto !important;
+}
+.coffeeCount{
+    width: 30px;
+}
+.coffeeSelectCheck{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 49%;
+    text-align: center;
+}
+.coffeeSell1{
+    width: 100%;
+    position: absolute;
+    top: 186px;
+}
+.coffeeSell2{
+    width: 100%;
+    position: absolute;
+    top: 364px;
+}
+.coffeeSell3{
+    width: 100%;
+    position: absolute;
+    top: 546px;
+}
+.coffeeSell4{
+    width: 100%;
+    position: absolute;
+    top: 716px;
+}
+/*****************************************/
 .shareBox{
     position: absolute;
     top: 123px;
