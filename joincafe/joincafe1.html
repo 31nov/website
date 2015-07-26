@@ -1,143 +1,63 @@
-<html lang="ko"><head>
+<html lang="ko">
+   <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width = device-width">
-        <link rel="stylesheet" href="joincafe1.css">
+        <link rel="stylesheet" href="joincafe.css">
 		<title>고객 선택_Join Cafe</title>
 	</head>
 	<body>
 		<header>
-            <h1>Cafe 세부 설명</h1>
+            <h1>앱 로그인</h1>
 		</header>
 		<main>
             <article>
 		    <div>
 		        <div class="phoneHead">
-                    <button onclick="window.history.go(-1)"><img src="./image/backspace.png"></button>
-                    카페 세부 정보
+                    로그인
                     <div class="login">
-                        <span><a href="join1.html">홍길동</a></span>
-                        <a href="option.html">
-                            <img src="./image/option.png" style="height:20px; width:20px">
-                        </a>
                     </div>
 		        </div>
                 <article class="cafeList">
-<!--=========================1=========================-->
-                    <div>
-                        <div>
-                            <table>
-                                <tbody><tr style="vertical-align:middle">
-                                    <td style="width:50%; padding-right:1px;">
-                                         투썸플레이스
-                                    </td>
-                                </tr>
-                            </tbody></table>
-                            <hr>
-                        </div>
-                        <img src="./image/like.png" style="height:20px; width:20px"> 20<br>
-                        <img src="./image/cafe1.png">
-                        <div class="imgSide">
-                            <span>
-                                <img src="./image/wifi.png">
-                                <img src="./image/gage5.png">
-                            </span>
-                            <br>
-                            <span>
-                                <img src="./image/conent.png">
-                                <img src="./image/gage5.png">
-                            </span>
-                            <br>
-                            <span>
-                                <img src="./image/toilet.png">
-                                <img src="./image/gage5.png">
-                            </span>
-                            <br>
-                            <span>
-                                <img src="./image/light.png">
-                                <img src="./image/gage1.png">
-                            </span>
-                            <br>
-                            <span>
-                                <img src="./image/smoking.png">
-                                none
-                            </span>
-                            <br>
-                        </div>
-                        <div>
-                        <table class="cafeImpo">
-                            <tr>
-                                <td>
-                                    <span>
-                                       <img src="./image/cash.png" style="width:19px; height:auto; margin-right:5px;">1,000 / Hour
-                                    </span>
-                                </td>
-                                <td>
-                                    <span>
-                                        <img src="./image/time.png" style="width:19px; height:auto; margin-right:5px;">3시간 이하
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                 <td>
-                                    <span>
-                                        <img src="./image/coffee.png" style="width:19px; height:auto; margin-right:5px;">평균 3,000
-                                    </span>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                        </table>
-                        </div>
-                        <hr>
-                        카페 사진<br>
-                        <div class="cafePic">
-                            <img src="./image/cafe2.png">
-                            <img src="./image/cafe3.png">
-                            <img src="./image/cafe1.png">
-                            <img src="./image/cafe4.png">
-                            <img src="./image/cafe5.png">
-                            <img src="./image/picPlus.png">
-                        </div>
-                        <hr>
-                        주인장 한마디<br>
-                        <div class="ownerTalk">
-                            안녕하세요~ 투썸플레이스 주인장 가가멜입니다.
-                            저희 커피숍으로 오세요~
-                             저희 커피숍은 조명이 어두운 편이지만, 오신다면 그 테이블에 라이트를 놔드리겠습니다.
-                            3시간 동안 조용한 환경에서 즐거운 시간이 되실 수 있도록 모시겠습니다^^
-                        </div>
-                        <hr>
-                        약도<br>
-                        <div class="cafePic">
-                            <img src="./image/map.png">
-                        </div>
-                        사용후기<br>
-                        <div class="ownerTalk talkBox">
-                            <b>고길동</b>: 청결하고 좋아요~^^<hr>
-                            <b>둘리</b>: 너무 어두워요...ㅠㅠ<hr>
-                            <b>꼬치</b>: 생각보다 와이파이가 안터져요..ㅠㅠ<hr>
-                            <b>마이콜</b>: 커피가 맛있네요~<hr>
-                        </div>
+<!--===================================================-->
+                    <a href="joincafe2.html">
+                        <img class="loginBox" src="./image/googleLogin.png">
+                    </a>
+                    <a href="joincafe2.html">
+                        <img class="loginBox" src="./image/facebookLogin.png">
+                    </a>
+                    <a href="joincafe2.html">
+                        <img class="loginBox" src="./image/twitterLogin.png">
+                    </a>
+                    <a href="joincafe2.html">
+                        <img class="loginBox" src="./image/kakaotalkLogin.png">
+                    </a>
+                    <hr>
+                    <input class="loginBox" type="text" value="ID입력">
+                    <input class="loginBox" type="password" placeholder="****">
+                    <a href="joincafe2.html">
+                        <input class="loginbtn" type="button" value="로그인">
+                    </a>
+                    <div style="margin-left:17px; border:0;">
+                        <a href="except.html">아이디 만들기</a>
+                        <br>
+                        <a href="except.html">아이디 찾기</a>
+                        <a href="except.html">비밀번호 찾기</a>
                     </div>
 <!--===================================================-->
                 </article>
                 <div class="phoneBottom">
-                   <a href="join5.html">
-                    <button class="shareBtn" type="button" style="width: auto;">예약하기</button>
-                   </a>
+                   
                 </div>
 		    </div>
 		    </article>
 		    <div class="size"></div>
 		    <ul>
-		        <li>가맹점 앱에서 카페 주인이 올린 정보를 모두 보여준다.</li>
-		        <li>카페 사진은 최초 5개가 보이고, (+)버튼을 누르면 추가 5개를 보여준다.</li>
-		        <li>주인장 한마디는 가맹점에서 승인을 날릴때 작성한 멘트를 보여준다.(승인을 날릴 때 작성한 멘트가 없으면 안나온다.)</li>
-		        <li>약도는 지도 앱을 연동해 보여준다.</li>
-		        <li>사용 후기는 가장 하단에 모두 나열한다.</li>
+		        <li>비회원 사용 가능 여부 <b class="colorred">검토</b> 필요</li>
+		        <li>타 SNS아이디 사용 여부 <b class="colorred">검토</b> 필요</li>
+		        <li>타 SNS아이디 사용 시 가능한 걸 어떤 걸로 할지 <b class="colorred">검토</b> 필요</li>
 		    </ul>
 		</main>
     <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
-    <script src="joincafe1.js"></script>
+    <script src="joincafe.js"></script>
 	
 </body></html>

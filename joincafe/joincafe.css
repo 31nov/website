@@ -4,6 +4,12 @@
 .phone{
 
 }
+.colorBlue{
+    color: blue; 
+}
+.colorred{
+    color: red;   
+}
 body{
     margin: 0;
 }
@@ -17,9 +23,6 @@ main>article>div{
     
     top: 38px;
     overflow: scroll;
-}
-.login{
-    float: right;
 }
 .phoneHead>img{
     position: absolute;
@@ -62,8 +65,22 @@ img{
     width: 50%;
     height: auto;
 }
-
-/*****************************************/
+/*******************cafe2****************/
+img{
+    width: 20px;
+    height: 20px;
+}
+main>article>div>form{
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 10px;   
+}
+.title{
+    font-weight: bold;
+    font-size: 13px;
+}
+/****************************************/
+/*******************cafe4****************/
 .cafeList{
     padding: 5px;
     overflow: scroll;
@@ -91,6 +108,25 @@ img{
     background: pink;   
 }
 /*****************************************/
+/*******************cafe1****************/
+.loginBox{
+    margin: 5px 17px; 
+    width: 280px; 
+    height: auto;
+    font-size: 20px;
+}
+.loginbtn{
+    float: right;
+    margin-right: 17px;
+    margin-top: 5px;
+    
+    width: 70px;
+    height: 40px;
+    
+    font-size: 18px;
+    background: gray;
+}
+/****************************************/
 .shareBox{
     position: absolute;
     top: 123px;
@@ -147,12 +183,16 @@ img{
 }
 .phoneBottom button{
     position: relative;
-    left: 263px;
-    top: 4px;
     box-sizing: border-box;
     border-radius: 5px;
+    margin: 3px 0;
     width: 100px;
     height: 32px;
+}
+.login{
+    position: absolute;
+    bottom: 9px;
+    right:0;
 }
 .size{
     height: 100px;
