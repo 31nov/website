@@ -1,0 +1,74 @@
+<html lang="ko"><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width">
+        <link rel="stylesheet" href="joincafe.css">
+		<title>고객 선택_Join Cafe</title>
+	</head>
+	<body>
+		<header>
+            <h1>Join 커피숍 확인</h1>
+		</header>
+		<main>
+            <article>
+		    <div>
+		        <div class="phoneHead">
+                    <button onclick="window.history.go(-1)"><img src="./image/backspace.png"></button>
+                    예약 진행 리스트
+		        </div>
+                <article class="cafeList">
+<!--=========================1=========================-->
+                    <div class="listBox success">
+                       <sup>No.1</sup><br>
+                       <sup style="margin:10px;">예약 완료</sup><br>
+                        <span> <b class="colorred">신촌 7월 04일 12시~15시</b> </span><br>
+                        <div style="text-align:right; font-size:14px;">
+                            <a href="joinCafe9.html">세부 정보 보기
+                            </a>
+                        </div>
+                    </div>
+<!--=========================2=========================-->
+                    <div class="listBox">
+                       <sup>No.2</sup><br>
+                       <sup style="margin:10px;">강남 7월 05일 PM 2시 예약</sup><br>
+                        <span> 카페 응답을 기다리고 있습니다.<img style="margin: -1px 2px -4px 5px;" src="./image/loading.png"></span><br>
+                        <div style="text-align:right; font-size:14px;">
+                            <a href="joinCafe4.html">승인한 커피숍 리스트(1)
+                                <img class="newCount" src="./image/newCount.png">
+                            </a>
+                        </div>
+                    </div>
+<!--===================================================-->
+                   <center>
+                    <div class="spot"></div>
+                    <div class="spot"></div>
+                    <div class="spot"></div>
+                   </center>
+                </article>
+                <div class="phoneBottom">
+                   <center>
+                       <a href="joincafe2.html">
+                        <button type="button" style="width: auto;">예약 더 하기</button>
+                       </a>
+                    </center>
+                   <div class="login">
+                        <span><a href="joincafe1.html">홍길동</a></span>
+                            <a href="option.html">
+                                <img src="./image/option.png" style="height:20px; width:20px">
+                            </a>
+                    </div>
+                </div>
+		    </div>
+		    </article>
+		    <div class="size"></div>
+		    <ul>
+		        <li>가맹점 앱에서 카페 주인이 올린 정보를 모두 보여준다.</li>
+		        <li>카페 사진은 최초 5개가 보이고, (+)버튼을 누르면 추가 5개를 보여준다.</li>
+		        <li>주인장 한마디는 가맹점에서 승인을 날릴때 작성한 멘트를 보여준다.(승인을 날릴 때 작성한 멘트가 없으면 안나온다.)</li>
+		        <li>약도는 지도 앱을 연동해 보여준다.</li>
+		        <li>사용 후기는 가장 하단에 모두 나열한다.</li>
+		    </ul>
+		</main>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script src="joincafe.js"></script>
+	
+</body></html>

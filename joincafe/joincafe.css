@@ -215,25 +215,89 @@ main>article>div>form{
     top: 716px;
 }
 /*****************************************/
-.shareBox{
-    position: absolute;
-    top: 123px;
-    left: 10px;
-    
-    width: 322px;
-    height: 406px;
-    background: #000;
-    opacity: 0.5;
+/********************cafe7****************/
+.CashSystemLink a{
+    text-decoration: none;
 }
+.cardCash{
+/*    border: 1px solid #000;*/
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: auto;
+    height: 40px;
+
+    font-size: 15px;
+    
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.blue{
+    background: #18709C;
+    color: #FFEA1A;
+}
+.blue2{
+    background: #0574A9;
+    color: white;
+}
+.yellow{
+    background: #F2BE1B;
+    color: black;
+}
+.gray{
+    background: #545658;
+    color: white;
+}
+
+/*****************************************/
+/*****************joincafe8******************/
+.success{
+    background: #ffea1a;   
+}
+/*****************************************/
+/*******************joincafe9***************/
+.cafecancel{
+    width: 100%;
+    text-align: right;
+}
+/*****************************************/
+/***************joincafe10*******************/
+.shareBox{
+    padding: 5px 20px;
+    height: 378px;
+    overflow: scroll;
+    
+    text-align: center;
+    font-size: 15px;
+}
+.shareBox a{
+    text-decoration: none;
+}
+.shareBtn{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    margin: 6px;
+    padding: 28px;
+    
+}
+       
 .shareimg{
     position: absolute;
     top: 123px;
     left: 10px;
     margin: 46px 70px;
 }
-.shareBtn{
-    background: pink;
+.red{
+    background: #F03159;
+    color: #FFEA1A;
 }
+.orange{
+    background: #FF8B1C;
+    color: white;
+}
+/*****************************************/
 /*******************potion***************/
 .blackblock{
     position: fixed;
