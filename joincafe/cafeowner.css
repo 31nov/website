@@ -49,7 +49,7 @@ main>article>div{
     
     color: white;
 }
-.phoneHead>button{
+.phoneHead button{
     width: 20px;
     height: 20px;
     margin: 0;
@@ -124,10 +124,12 @@ main>article>div>form{
     padding: 5px;
     overflow: scroll;
 }
-.cafeList>button{
-    width: 314px;
-    height: 20px;
+.cafeList>center>button{
+    width: auto;
+    height: 37px;
     margin: 5px 0;
+    border-radius: 5px;
+    padding: 4px;
 }
 .cafeList>div{
     border: 1px solid #000;
@@ -139,9 +141,10 @@ main>article>div>form{
     position: absolute;
     background: black;
     opacity: 0.5;
+    border-radius: 3px;
     
-    width: 13px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     
     top: 6px;
     left: 6px;
@@ -149,6 +152,74 @@ main>article>div>form{
 .allcheckbox{
     position: absolute;
     margin-top: 11px;
+}
+.ownerTalkSpace{
+    width: 302px;
+    min-height: 80px;
+}
+/****************************************/
+/*******************cafe4****************/
+.listPush{
+    position: relative;
+    background: #FF8102;   
+    color: red;
+}
+/****************************************/
+/*******************cafe5****************/
+.listOK{
+    position: relative;
+    background: #58A3BE;   
+    color: #F1F2F4;
+}
+/****************************************/
+/*******************potion***************/
+.blackblock{
+    position: fixed;
+    width: 324px;
+    height: 486px;
+    
+    top: 99px;
+    left: 1px;
+    background: #000;
+    opacity: 0.8;
+}
+.optionBox{
+    position: fixed;
+    width: 280px;
+    height: 450px;
+    box-sizing: border-box;
+    
+    margin: 18px 22px;
+    padding: 5px;
+    top: 99px;
+    left: 1px;
+    background: #fff;
+    
+    font-size: 10px;
+}
+.optionBox>button{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+.optionClose{
+    width: 30px;
+    height: 30px;
+}
+/****************************************/
+/******************cafe6*****************/
+.coffeemake{
+    margin-left: 10px;
+    font-size: 12px;   
+}
+.coffeemake td{
+    width: 100px;   
 }
 /****************************************/
 .phoneBottom{

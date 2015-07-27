@@ -18,18 +18,24 @@
                 <article class="cafeList">
                     <!--=========================1=========================-->
                     <div class="listBox">
-                       <sup>No.1</sup><sup style="margin:10px;">강남구</sup><sup style="float:right;"><a href="cafecreateowner.html">등록 내용 보기</a></sup><br>
-                        <span>카페베네</span><br>
+                       <sup>No.1</sup>
+                       <sup style="margin:10px;">강남구</sup>
+                       <sup style="float:right;"><a href="cafecreateowner.html">등록 내용 수정</a></sup><br>
+                        <span>카페베네 <sub class="colorblue">(예약 성사: 4건)</sub></span><br>
                         <div style="text-align:right; font-size:14px;">
-                            <a href="cafeowner2.html">호출 리스트(+4)</a>
+                            <a href="cafeowner2.html">호출 리스트(+4)
+                                <img class="newCount" src="./image/newCount1.png">
+                            </a>
                         </div>
                     </div>
                     <!--=========================2=========================-->
                     <div class="listBox">
-                       <sup>No.2</sup><sup style="margin:10px;">신촌</sup><sup style="float:right;"><a href="cafecreateowner.html">등록 내용 보기</a></sup><br>
-                        <span>투썸플레이스</span><br>
+                       <sup>No.2</sup><sup style="margin:10px;">신촌</sup><sup style="float:right;"><a href="cafecreateowner.html">등록 내용 수정</a></sup><br>
+                        <span>투썸플레이스 <sub class="colorblue">(예약 성사: 1건)</sub></span><br>
                         <div style="text-align:right; font-size:14px;">
-                            <a href="cafeowner2.html">호출 리스트(+1)</a>
+                            <a href="cafeowner2.html">호출 리스트(+1)
+                                <img class="newCount" src="./image/newCount.png">
+                            </a>
                         </div>
                     </div>
                     <!--===================================================-->
@@ -57,14 +63,11 @@
 		    </article>
 		    <div class="size"></div>
 		    <ul>
-		        <li>접속 시 option 설정(<a href="option.html">옵션 페이지</a>)을 해논 상태라면 해당 옵션의 설정과 동일하게 "금액"과 "조건"에 표시가 되어 있고, 우측의 On-Off 버튼은 On상태로 있는다.</li>
-		        <li>Off로 변경 시 모든 선택항목은 "상관없어요"로 변경된다.</li>
-		        <li>On으로 변경 시 option 상태와 동일하게 선택상태로 바뀐다.</li>
-		        <li>On 상태에서 항목 중 하나라도 선택항목을 변경하면, Off상태로 바뀐다.</li>
-		        <li>전송하기 버튼을 누르면 현재 선택한 항목으로 서버에 전송한다.</li>
-		        <ul>
-		            <li>항목에 해당하는 사항으로 가맹점에 푸쉬하는 조건은 <a href="dbserver1.html">DB서버 페이지</a>에서 확인 가능하다.</li>
-		        </ul>
+		        <li>2개 이상의 커피숍을 운영하는 사람을 위해 여러 개의 카페를 등록할 수 있다.</li>
+		        <li>"등록 내용 수정"을 통해 기존에 카페 설정을 변경할 수 있다.</li>
+		        <li>"예약 건수"는 이미 예약이 완료되어, 아직 시간이 지나지 않은 예약의 숫자를 보여준다.</li>
+		        <li>호출 리스트의 괄호에 있는 숫자는 이미 확인한 리스트의 숫자를 보여준다.</li>
+		        <li>호출 리스트의 오른쪽 끝에 있는 숫자는 아직 확인 못한 호출 리스트의 숫자를 보여준다.</li>
 		    </ul>
 		</main>
     <script src="https://code.jquery.com/jquery-1.11.2.js"></script>

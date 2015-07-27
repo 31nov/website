@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<header>
-            <h1>[가맹점]앱 가맹점 대기상태</h1>
+            <h1>[가맹점]예약 승인 상태</h1>
 		</header>
 		<main>
             <article>
@@ -14,7 +14,8 @@
 		        <div class="phoneHead">
                     <a href="cafeowner1.html">
                         <button><img src="./image/backspace.png"></button>
-                    </a>                    고객 호출 리스트
+                    </a>
+                    고객 호출 리스트
 		        </div>
 <!--===================================================-->
                 <article class="cafeList">
@@ -25,10 +26,10 @@
                         <button>예약이 성사된<br>항목만 보기</button>
                     </center>
                     <!--=========================1=========================-->
-                    <div class="listBox">
-                       <sup><input type="checkbox" checked>No.1</sup><sup style="float:right;">부합도:80%</sup><br>
+                    <div class="listBox listOK">
+                       <sup><input type="checkbox">No.1</sup><sup class="colorred" style="float:right;">예약 진행 중</sup><div class="noneblock"></div><br>
                        <sup style="margin:10px;">7월 04일 12시</sup><br>
-                        <span>예약 진행중<img style="margin: -1px 2px -4px 10px;" src="./image/loading.png"></span><br>
+                        <span><a href="cafeowner6.html"><b>예약 결정 </b>[ 4일 4시간전 ]</a></span><br>
                         <div style="text-align:right; font-size:14px;">
                             <a href="cafeowner3.html">세부 항목 보기</a>
                         </div>
@@ -78,23 +79,12 @@
                 </div>
 		    </div>
 		    </article>
-		    
 		    <div class="size"></div>
 		    <ul>
-		        <li>상단의 4개 버튼을 통해 원하는 항목만 볼 수 있다.</li>
-		        <li>호출 리스트는 시간순으로 가장 가까운 시간의 항목이 위로 올라온다.</li>
-		        <li>부합도는 가맹점 앱에 등록한 내용과 고객이 요청하는 내용간의 격차를 퍼센트로 보여준다.</li>
-		        <li>리스트의 종류는 아래와 같다.</li>
-		          <ul>
-		              <li>예약 진행중: 아직 고객이 커피숍을 선택하지 않았고, 승락 푸쉬를 보내지 않은 예약 건</li>
-		              <li>고객 승인 대기 중: 아직 고객이 커피숍을 선택하지 않았고, 승락 푸쉬를 보낸 예약 건</li>
-		              <li>다른 카페 예약 완료: 고객이 다른 커피숍을 선택한 예약 건</li>
-		              <li>예약 결정: 고객이 승락 푸쉬를 받아들여, 예약한 건</li>
-		          </ul>
-		        <li>"세부 항목 보기"를 통해 고객의 요청사항을 볼 수 있다.</li>
-		        <li>각 리스트의 체크항목에 체크를 하고, 중앙 하단의 승인 보내기를 누르면 체크가 된 모든 호출 리스트에 푸쉬를 보낸다.</li>
-		        <li>체크를 할 수 있는 리스트는 "예약 진행중"인 리스트만 가능하다.</li>
-		        <li>좌측하단의 전체 선택을 체크하면, 예약 진행 중인 모든 호출 리스트에 체크가 된다.</li>
+		        <li>고객이 커피까지 구매를 완료하면, 푸쉬 알람을 통해 앱 주인에게 알람이 울린다.</li>
+		        <li>고객이 커피 구매까지 완료를 하면, "고객 승인 대기중"인 항목이 "예약 결정"으로 바뀐다.</li>
+		        <li>그리고 고객이 예약한 시간까지의 남은 시간이 함께 표시된다. 이 시간은 1시간 이전까지는 남은 일자와 시간까지만 보여준다.</li>
+		        <li>예약한 시간이 1시간 이내가 되면 분 단위로 보여준다.</li>
 		    </ul>
 		</main>
     <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
