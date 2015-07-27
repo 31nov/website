@@ -1,0 +1,186 @@
+@charset "utf-8"
+/*html reset*/
+/*All*/
+.phone{
+
+}
+.colorBlue{
+    color: blue; 
+}
+.colorred{
+    color: red;   
+}
+body{
+    margin: 0;
+}
+main>article>div{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #000;
+    
+    width: 324px;
+    height: 486px;
+    
+    top: 38px;
+    overflow: scroll;
+}
+.phoneHead>img{
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+}
+.phoneHead{
+    position: fixed;
+    z-index: 2;
+    background: #18709C;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid #000;
+    
+    box-sizing: border-box;
+    
+    padding: 10px;
+    left: 0;
+    height: 38px;
+    width: 326px;
+    vertical-align: middle;
+    
+    color: white;
+}
+.phoneHead>button{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+.cafePicHalf{
+    width: 50% !important;
+    height: auto !important;
+}
+/*******************cafe1****************/
+.loginBox{
+    margin: 5px 17px; 
+    width: 280px; 
+    height: auto;
+    font-size: 20px;
+}
+.loginbtn{
+    float: right;
+    margin-right: 17px;
+    margin-top: 5px;
+    
+    width: 70px;
+    height: 40px;
+    
+    font-size: 18px;
+    background: gray;
+}
+/****************************************/
+/*******************cafe2****************/
+img{
+    width: 20px;
+    height: 20px;
+}
+main>article>div>form{
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 10px;   
+}
+.title{
+    font-weight: bold;
+    font-size: 13px;
+}
+/****************************************/
+/*******************cafe3****************/
+.listBox{
+    height: auto;
+    background: #ddd;
+}
+.listClose{
+    position: relative;
+    background: #222;
+    color: #aaa;
+}
+.listBox span{
+    margin-left: 10px;   
+}
+.newCount{
+    width: 40px !important; 
+    margin: 10px 2px -6px 5px;
+}
+.spot{
+    width: 10px;
+    height: 10px;
+    background: #888;
+    border-radius: 10px !important;
+    border: none !important;
+    margin: 10px;
+}
+.cafeList{
+    padding: 5px;
+    overflow: scroll;
+}
+.cafeList>button{
+    width: 314px;
+    height: 20px;
+    margin: 5px 0;
+}
+.cafeList>div{
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px 0;
+}
+.noneblock{
+    position: absolute;
+    background: black;
+    opacity: 0.5;
+    
+    width: 13px;
+    height: 15px;
+    
+    top: 6px;
+    left: 6px;
+}
+.allcheckbox{
+    position: absolute;
+    margin-top: 11px;
+}
+/****************************************/
+.phoneBottom{
+    position: fixed;
+    z-index: 2;
+    background: #18709C;
+    
+    height: 40px;
+    width: 324px;
+    
+    top: 585px;
+    left: 0;
+    
+    border: 1px solid #000;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.phoneBottom button{
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 3px 0;
+    width: 100px;
+    height: 32px;
+}
+.login{
+    position: absolute;
+    bottom: 9px;
+    right:0;
+}
+.size{
+    height: 100px;
+}
+
