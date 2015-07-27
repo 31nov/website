@@ -372,3 +372,7 @@ main>article>div>form{
     height: 100px;
 }
 
+.overthrow { 
+    overflow: hidden; 
+    -webkit-overflow-scrolling: touch; 
+} 
